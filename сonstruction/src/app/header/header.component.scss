@@ -1,0 +1,146 @@
+@import "../../styles.scss";
+
+.header {
+  &__content {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h1{
+      margin-bottom: 4rem;
+      font-size: 4rem;
+      @include bold();
+      text-transform: uppercase;
+      line-height: 1.45;
+  }
+
+  // &__servants {}
+
+  // &__form {}
+}
+}
+
+.servants {
+
+  &__subtitle {
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  &__how-money {
+    padding: 3rem 5rem;
+    display: inline-block;
+    background: $icons-color;
+    font-size: 1.8rem;
+    color: $light;
+    text-align: center;
+    strong{
+      font-size: 2rem;
+      @include bold();
+    }
+  }
+
+  &__trigger {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    @include bold();
+    display: block;
+    margin-top: 3rem;
+  }
+}
+.calc {
+  background: $light;
+  padding: 4rem 5rem 4rem 5rem;
+  text-align: center;
+  position: relative;
+  &__title {
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+    strong{
+      font-size: 1.9rem;
+      @include bold();
+  }
+}
+
+  &__form {
+      small{
+      display: block;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      }
+  }
+}
+
+
+
+
+@media screen and (max-width: 1139px){
+  .servants{
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 990px){
+  .header {
+    background-position: top right;
+    &__content {
+      margin-top: 3rem;
+      justify-content: space-around;
+      text-align: center;
+    }
+  }
+  .servants{
+    margin: 0 15px 25px 15px;
+  }
+  .calc {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 765px){
+  .servants{
+    margin: 0 0 25px 0px;
+  }
+  .calc {
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 540px){
+  .header{
+    background-position: left top;
+    &__content{
+      flex-direction: column;
+      h1{
+        font-size: 35px;
+      }
+    }
+  }
+
+  .calc {
+    width: 100%;
+  }
+
+}
+
+
+@media (min-width: 320px) and (max-width: 539px){
+  .header{
+    background-position: left top;
+    &__content{
+      h1{
+        font-size: 20px;
+     }
+    }
+  }
+    .servants {
+      &__how-money{
+      padding: 2rem 3rem;
+    }
+    &__subtitle {
+      font-size: 2rem;
+    }
+  }
+}

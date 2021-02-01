@@ -1,0 +1,112 @@
+@import '../../styles.scss';
+
+
+.materials {
+  background: url(../../assets/images/feedback/feedback-bg.jpg) center center;
+  background-size: cover;
+
+  &__title {
+    p{
+      font-size: 1.7rem;
+      margin: 6rem 0 0 0;
+    }
+  }
+
+  //&__content {}
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  //&__column {}
+
+  &__order{
+    text-align: center;
+    p{
+      font-size: 1.8rem;
+      margin-top: 6rem;
+      @include bold();
+    }
+    a{
+      color: $icons-color;
+      &:hover{
+        color: darken($color: $icons-color, $amount: 10%);
+      }
+    }
+    span{
+      font-size: 2rem;
+    }
+
+  }
+}
+
+.sale {
+  width: 25%;
+  margin-top: 4rem;
+  text-align: center;
+  &__images {
+    height: 180px;
+    &_one{
+      background: url(../../assets/images/materials/knauf.png) no-repeat center center;
+    }
+    &_two{
+      background: url(../../assets/images/materials/volma.png) no-repeat center center;
+    }
+    &_three{
+      background: url(../../assets/images/materials/forman.png) no-repeat center center;
+    }
+    &_four{
+      background: url(../../assets/images/materials/ceresit.png) no-repeat center center;
+    }
+  }
+
+  &__content{
+    min-height: 12rem;
+  }
+
+  &__headding {
+    font-size: 2rem;
+    @include bold();
+  }
+
+  &__subscribe {
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+    strong{
+      @include bold();
+    }
+  }
+
+  &__sertificate {
+    color: $icons-color;
+    font-size: 1.5rem;
+    padding-bottom: 0.1rem;
+    text-decoration: none;
+    border-bottom: 1px solid $icons-color;
+    &:hover{
+      color: darken($color: $icons-color, $amount: 50%);
+    }
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .materials {
+    &__order{
+      span{
+        display: block;
+      }
+    }
+  }
+
+  .sale {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 535px){
+  .sale {
+    width: 100%;
+  }
+}

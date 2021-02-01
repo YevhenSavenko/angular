@@ -1,0 +1,24 @@
+@import '../styles.scss';
+
+.footer{
+  &__content{
+  text-align: center;
+  a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $text;
+    border-bottom: 1px dashed $text;
+  }
+  span{
+    font-size: 1.6rem;
+    display: block;
+    border-bottom: 1px dashed $text;
+  }
+
+}
+&__phone{
+  @include bold;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+}

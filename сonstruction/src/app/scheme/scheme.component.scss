@@ -1,0 +1,108 @@
+@import "../../styles.scss";
+
+.scheme {
+  background: url(../../assets/images/sheme/bg-bottom.png) bottom -15rem right -20rem no-repeat;
+
+
+  &__box {
+  }
+
+  &__title {
+    p{
+      font-size: 1.6rem;
+      margin: 2rem 0 0 0;
+    }
+  }
+
+  &__body {
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: 33%;
+    padding: 0 47.5px;
+    margin-top: 9rem;
+    &:last-of-type{
+      margin-right: auto;
+    }
+    &:nth-child(3){
+      padding-right: 0px;
+    }
+    h3{
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      @include bold();
+    }
+    p{
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      span{
+        display: block;
+      }
+    }
+  }
+  &__image{
+    height: 110px;
+    &_one{
+      background: url(../../assets/images/sheme/1.png) no-repeat left center;
+    }
+    &_two{
+      background: url(../../assets/images/sheme/2.png) no-repeat left center;
+    }
+    &_three{
+      background: url(../../assets/images/sheme/3.png) no-repeat left center;
+    }
+    &_four{
+      background: url(../../assets/images/sheme/4.png) no-repeat left center;
+    }
+    &_five{
+      background: url(../../assets/images/sheme/5.png) no-repeat left center;
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 1220px){
+  .scheme {
+    background-position: bottom -15rem right -20rem;
+    background-size: 70rem;
+    &__column {
+      width: 50%;
+      text-align: center;
+      white-space: pre-wrap;
+      &:nth-child(3){
+        padding-right: 47.5px;
+      }
+      p{
+        span{
+          display: block;
+        }
+      }
+    }
+    &__image{
+      background-position: center center;
+      &_one{
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 765px){
+  .scheme {
+    background: none;
+      &__column {
+        width: 100%;
+      }
+    &__row {
+      margin: 0;
+    }
+  }
+}

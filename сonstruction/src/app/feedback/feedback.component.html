@@ -1,0 +1,161 @@
+<section class="feedback">
+  <div class="container">
+    <div class="feedback__title title">
+      <h2>
+        Отзывы
+      </h2>
+    </div>
+    <div class="feedback__services">
+      <div class="feedback__left arrow-header">
+        <a (click)="moveLeft()" style="cursor: pointer;"><img src="../../assets/images/feedback/back_white.png"
+            alt=""></a>
+      </div>
+      <drag-scroll #feedback__body class="feedback__slider">
+        <div drag-scroll-item class="feedback__row">
+          <div class="feedback__wolls">
+            <div class="feedback__mini-slider">
+              <div class="feedback__header-img">
+                <div class="feedback__arrow-left arrow">
+                  <a (click)="counterDecrement()"><img src="../../assets/images/feedback/left-button.png" alt=""></a>
+                </div>
+                <div class="feedback__header-hover">
+                  <img src="../../assets/images/feedback/{{counter}}.jpg" alt="">
+                </div>
+                <div class="feedback__arrow-right arrow">
+                  <a (click)="counterIncrement()"><img src="../../assets/images/feedback/right-button.png" alt=""></a>
+                </div>
+              </div>
+              <div class="feedback__fotoram">
+                <a *ngFor="let num of images" (click)="hrefImg(num)">
+                  <img [src]="'../../assets/images/feedback/'+ num +'.jpg'" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="feedback__content">
+              <div class="feedback__about">
+                <p>Объект: г. Москва, Нахимовский проспект дом 10</p>
+                <p>Площадь: <strong>357 м<sup>2</sup></strong></p>
+                <p>Выполнен за: <strong>10 дней</strong></p>
+                <p>Стоимость: <strong>550 рублей за квадратный метр</strong></p>
+                <p>Особенности: <strong>перепады неровности стен достигали до 6 см</strong></p>
+              </div>
+              <div class="feedback__comment">
+                <div class="comment__avatar">
+                  <img src="../../assets/images/feedback/avatar.png" alt="">
+                </div>
+                <div class="comment__data">
+                  <h6>Заказчик</h6>
+                  <h4>Нахимов Артем</h4>
+                </div>
+              </div>
+              <div class="feedback__review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt ipsam eaque ea, rerum minus
+                  voluptate velit hic possimus consectetur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div drag-scroll-item class="feedback__row">
+          <div class="feedback__wolls">
+            <div class="feedback__mini-slider">
+              <div class="feedback__header-img">
+                <div class="feedback__arrow-left arrow">
+                  <a (click)="counterDecrement()"><img src="../../assets/images/feedback/left-button.png" alt=""></a>
+                </div>
+                <div class="feedback__header-hover">
+                  <img src="../../assets/images/feedback/{{counter}}.jpg" alt="">
+                </div>
+                <div class="feedback__arrow-right arrow">
+                  <a (click)="counterIncrement()"><img src="../../assets/images/feedback/right-button.png" alt=""></a>
+                </div>
+              </div>
+              <div class="feedback__fotoram">
+                <a *ngFor="let num of images" (click)="hrefImg(num)">
+                  <img [src]="'../../assets/images/feedback/'+ num +'.jpg'" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="feedback__content">
+              <div class="feedback__about">
+                <p>Объект: г. Москва, Нахимовский проспект дом 10</p>
+                <p>Площадь: <strong>357 м<sup>2</sup></strong></p>
+                <p>Выполнен за: <strong>10 дней</strong></p>
+                <p>Стоимость: <strong>550 рублей за квадратный метр</strong></p>
+                <p>Особенности: <strong>перепады неровности стен достигали до 6 см</strong></p>
+              </div>
+              <div class="feedback__comment">
+                <div class="comment__avatar">
+                  <img src="../../assets/images/feedback/avatar.png" alt="">
+                </div>
+                <div class="comment__data">
+                  <h6>Заказчик</h6>
+                  <h4>Нахимов Артем</h4>
+                </div>
+              </div>
+              <div class="feedback__review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt ipsam eaque ea, rerum minus
+                  voluptate velit hic possimus consectetur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div drag-scroll-item class="feedback__row">
+          <div class="feedback__wolls">
+            <div class="feedback__mini-slider">
+              <div class="feedback__header-img">
+                <div class="feedback__arrow-left arrow">
+                  <a (click)="counterDecrement()"><img src="../../assets/images/feedback/left-button.png" alt=""></a>
+                </div>
+                <div class="feedback__header-hover">
+                  <img src="../../assets/images/feedback/{{counter}}.jpg" alt="">
+                </div>
+                <div class="feedback__arrow-right arrow">
+                  <a (click)="counterIncrement()"><img src="../../assets/images/feedback/right-button.png" alt=""></a>
+                </div>
+              </div>
+              <div class="feedback__fotoram">
+                <a *ngFor="let num of images" (click)="hrefImg(num)">
+                  <img [src]="'../../assets/images/feedback/'+ num +'.jpg'" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="feedback__content">
+              <div class="feedback__about">
+                <p>Объект: г. Москва, Нахимовский проспект дом 10</p>
+                <p>Площадь: <strong>357 м<sup>2</sup></strong></p>
+                <p>Выполнен за: <strong>10 дней</strong></p>
+                <p>Стоимость: <strong>550 рублей за квадратный метр</strong></p>
+                <p>Особенности: <strong>перепады неровности стен достигали до 6 см</strong></p>
+              </div>
+              <div class="feedback__comment">
+                <div class="comment__avatar">
+                  <img src="../../assets/images/feedback/avatar.png" alt="">
+                </div>
+                <div class="comment__data">
+                  <h6>Заказчик</h6>
+                  <h4>Нахимов Артем</h4>
+                </div>
+              </div>
+              <div class="feedback__review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt ipsam eaque ea, rerum minus
+                  voluptate velit hic possimus consectetur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </drag-scroll>
+      <div class="feedback__right arrow-header">
+        <a (click)="moveRight()" style="cursor: pointer;"><img src="../../assets/images/feedback/next_white.png"
+            alt=""></a>
+      </div>
+    </div>
+    <app-feedback-forms></app-feedback-forms>
+  </div>
+  <img src="../../assets/images/feedback/hand.png" alt="" class="feedback__hand">
+</section>

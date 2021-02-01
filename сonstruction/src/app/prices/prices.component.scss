@@ -1,0 +1,130 @@
+@import "../../styles.scss";
+
+.price {
+  background: $icons-color url(../../assets/images/prices/prices-bg.jpg) center;
+
+  // &__top {}
+
+  &__headding {
+    position: relative;
+  }
+
+  &__title {
+    color: $light;
+    p{
+      font-size: 1.7rem;
+    }
+  }
+
+  &__calc {
+    position: absolute;
+    right: 0;
+    top: 1.3rem;
+  }
+
+  &__row {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    padding: 1rem 3rem;
+    background: $light;
+    box-shadow: 7px 12px 21px 0px rgba(0,0,0,0.17);
+    text-align: center;
+  }
+}
+
+.column {
+
+  &__title {
+    h4{
+      margin: 3rem 0;
+      font-size: 1.9rem;
+      @include bold();
+    }
+  }
+
+  // &__image {}
+
+  &__price {
+    font-size: 1.9rem;
+    @include bold();
+    margin: 2rem 0;
+  }
+
+  // &__list {}
+
+  &__order {
+    margin-bottom: 2rem;
+  }
+}
+.list {
+
+  &__check {
+    min-height: 19rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    &:before{
+      content: '';
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      background: url(../../assets/images/prices/ico.png) no-repeat center;
+      background-size: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1139px){
+  .price {
+    &__row {
+      margin-top: 5rem;
+      justify-content: space-around;
+    }
+    &__column {
+      margin-top: 5rem;
+    }
+    &__calc {
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 870px){
+  .price {
+    &__row {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width:420px){
+  .price {
+    &__column {
+      width: 100%;
+    }
+
+    .column {
+      &__image {
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+

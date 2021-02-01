@@ -1,0 +1,81 @@
+@import "../../styles.scss";
+
+
+.upsell {
+  background: $upsell-bg;
+  color: $light;
+  // &__additional {}
+
+  &__title {
+    p{
+      font-size: 1.8rem;
+      margin: 3rem 0 7rem 0;
+    }
+  }
+
+  &__view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  // &__card {}
+}
+
+.card {
+  text-align: center;
+  padding: 0 1.5rem;
+  p{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.6rem;
+  }
+
+    &__img {
+    width: 306px;
+    height: 174px;
+    &_left {
+      background: url(../../assets/images/upsell/1.jpg) no-repeat center center;
+    }
+
+    &_center {
+      background: url(../../assets/images/upsell/2.jpg) no-repeat center center;
+    }
+
+    &_right {
+      background: url(../../assets/images/upsell/3.jpg) no-repeat center center;
+    }
+  }
+  &__btn{
+    padding: 2rem 4rem;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1139px){
+  .upsell {
+    &__view {
+      justify-content: space-around;
+    }
+  }
+  .card {
+    margin-top: 5rem;
+    &__img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 420px){
+  .upsell {
+    &__title{
+      font-size: 3rem;
+    }
+  }
+  .card {
+    padding: 0rem;
+  }
+}

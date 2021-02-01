@@ -1,0 +1,101 @@
+@import "../../styles.scss";
+
+.benefits {
+  &__content {
+
+  }
+
+  &__show{
+    position: relative;
+    .arrow{
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .benefits__rigth{
+      right: 0;
+    }
+  }
+
+  &__title {
+    margin: 2rem 0 10rem 0;
+  }
+
+  &__row {}
+
+  &__column {
+    text-align: center;
+    width: 25%;
+    white-space: pre-wrap;
+    vertical-align: top;
+  }
+}
+.column {
+  &__images {
+    padding: 50px;
+  }
+  &__images_one{
+    background: url(../../assets/images/benefits/coin.png) no-repeat center center;
+  }
+  &__images_two{
+    background: url(../../assets/images/benefits/folder.png) no-repeat center center;
+  }
+  &__images_three{
+    background: url(../../assets/images/benefits/clock.png) no-repeat center center;
+  }
+  &__images_four{
+    background: url(../../assets/images/benefits/pig.png) no-repeat center center;
+  }
+
+  &__body {
+    padding: 0 10px;
+  }
+
+  &__sub-title {
+    margin-top: 10px;
+    font-size: 2rem;
+    @include bold();
+  }
+
+  &__text {
+    margin: 30px 0;
+    font-size: 1.5rem;
+    a{
+      color: #5297ff;
+      @include bold();
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1139px){
+  .benefits {
+    &__column{
+      width: 50%;
+    }
+    &__show{
+      .arrow{
+        display: block;
+      }
+    }
+  }
+  .column {
+    &__text {
+      padding: 0 40px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 690px){
+  .benefits {
+    &__column{
+      width: 100%;
+    }
+  }
+}

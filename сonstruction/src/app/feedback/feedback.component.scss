@@ -1,0 +1,285 @@
+@import "../../styles.scss";
+
+.feedback {
+  background: url(../../assets/images/feedback/feedback-bg.jpg) no-repeat center;
+  position: relative;
+  background-size: cover;
+  &__title {
+    margin-bottom: 8rem;
+  }
+  &__services{
+    position: relative;
+  }
+
+  &__slider {
+    padding: 5rem 6rem;
+    background: $light;
+    box-shadow: 6px 10px 18px 0px rgba(0,0,0,0.11);
+  }
+
+  &__row {
+    margin-bottom: 30px;
+    display: flex;
+  }
+
+  &__wolls{
+    display: flex;
+  }
+
+  &__mini-slider {}
+
+  &__left{
+    left: -6rem
+  }
+
+  &__right{
+    right: -6rem;
+  }
+
+  &__arrow-left{
+    height: 16px;
+    margin-left: 20px;
+
+  }
+  &__arrow-right{
+    margin-right: 20px;
+    right: 0;
+
+  }
+
+  &__header-img {
+    position: relative;
+    &:hover{
+      .arrow{
+        display: block;
+        opacity: 0.7;
+
+      }
+    }
+  }
+
+  &__fotoram{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    img{
+      width: 60px;
+      margin-right: 10px;
+      &:nth-child(1) {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__header-hover{
+    img{
+      height: 300px;
+    }
+
+  }
+
+  &__content{
+    margin-left: 4rem;
+  }
+
+  &__about{
+    p{
+      font-size: 1.6rem;
+      letter-spacing: 0.8px;
+      padding: 5px 0;
+      strong{
+        @include bold();
+      }
+    }
+  }
+
+  &__comment {
+    display: flex;
+    margin: 3rem 0 0 0;
+  }
+
+  &__review {
+    p{
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 1.6rem;
+      border: 2px solid $icons-color;
+      white-space: pre-wrap;
+      font-style: italic;
+      position: relative;
+      &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -2.111rem;
+        left: 4rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: $light;
+        border: 2px solid $icons-color;
+        border-bottom: none;
+        border-top-right-radius: 100px;
+
+      }
+    }
+  }
+
+  &__hand{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 30rem;
+  }
+
+  a{
+    cursor: pointer;
+
+  }
+
+}
+
+.comment {
+
+  &__avatar {}
+
+  &__data {
+    align-self: center;
+    margin-left: 1.5rem;
+    h6{
+      font-size: 1.4rem;
+    }
+    h4{
+      font-size: 1.8rem;
+      @include bold();
+    }
+  }
+}
+
+
+.arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.arrow-header{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  a{
+    background-color: $icons-color;
+    padding: 2.8rem 1.8rem ;
+  }
+}
+
+
+
+
+
+@media (max-width: 1230px) {
+  .feedback{
+    &__wolls{
+      flex-direction: column;
+    }
+    &__content{
+      margin: 3rem 0 0 0;
+    }
+    &__services{
+      width: 90%;
+      margin: 0 auto;
+    }
+    &__fotoram{
+      margin: 20px -10px 20px -10px;
+      img{
+        width: 100%;
+        padding: 0 5px;
+        &:last-of-type{
+          padding-right: 0;
+        }
+      }
+    }
+    &__header-hover{
+      text-align: center;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 993px) {
+  .feedback {
+    &__hand{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .feedback{
+    &__fotoram{
+      display: none;
+    }
+    &__content{
+      width: 100%;
+      white-space: pre-wrap;
+    }
+  }
+}
+
+@media (max-width: 800px){
+  .feedback{
+    &__content{
+      p{
+        margin-top: 10px;
+      }
+    }
+    &__right{
+      right: 0;
+    }
+    &__left{
+      left: 0;
+    }
+    &__services{
+      width: 100%;
+    }
+    &__content{
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .arrow-header{
+    a{
+    padding: 1.5rem 1rem;
+    }
+  }
+  .feedback{
+    &__header-hover{
+      text-align: center;
+      img{
+        display: none;
+      }
+    }
+    &__right{
+      right: 0;
+    }
+    &__left{
+      left: 0;
+    }
+    &__review{
+      p{
+        margin-top: 25px;
+        &::before{
+          left: 9rem;
+        }
+      }
+    }
+    &__comment {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  padding: 50px 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__column{
+    padding: 0 30px;
+  }
+}
+
+
+
+@media screen and (max-width: 800px){
+  .footer {
+    &__row {
+      justify-content: space-around;
+    }
+    &__column{
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .footer {
+    padding: 0 0 1.5rem 0;
+    &__row{
+      flex-direction: column;
+    }
+    &__column{
+      margin-top: 3.5rem;
+      padding: 0;
+    }
+  }
+}

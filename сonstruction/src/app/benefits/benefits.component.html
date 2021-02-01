@@ -1,0 +1,66 @@
+<!-- New style -->
+<section class="benefits">
+  <div class="container">
+    <div class="benefits__content">
+      <div class="benefits__title title">
+        Преимущества роботы с нами
+      </div>
+      <div class="benefits__show">
+        <div class="benefits__left arrow">
+          <a (click)="moveLeft()" style="cursor: pointer;"><img src="../../assets/images/benefits/back.png" alt=""></a>
+        </div>
+        <drag-scroll #benefits__slider class="benefits__row">
+          <div drag-scroll-item class="benefits__column column">
+            <div class="column__images column__images_one">
+              <!-- <img src="../../assets/images/coin.png" alt="Платите по факту"> -->
+            </div>
+            <div class="column__body">
+              <div class="column__sub-title">Платите по факту</div>
+              <div class="column__text">
+                Вы оплачиваете выполненые роботы только после их выполнения. Никаких скрытых и
+                промежуточных доплат
+              </div>
+            </div>
+          </div>
+          <div drag-scroll-item class="benefits__column column">
+            <div class="column__images column__images_two">
+              <!-- <img src="../../assets/images/folder.png" alt="Заключаем договор"> -->
+            </div>
+            <div class="column__body">
+              <div class="column__sub-title"> Заключаем договор </div>
+              <div class="column__text">
+                Перед началом робот заключаем договор на юридичиское лицо Вы можете
+                быть уверены, что все обязательства будут выполнены
+              </div>
+            </div>
+          </div>
+          <div drag-scroll-item class="benefits__column">
+            <div class="column__images column__images_three">
+              <!-- <img src="../../assets/images/clock.png" alt="Точно в срок"> -->
+            </div>
+            <div class="column__body">
+              <div class="column__sub-title">Точно в срок</div>
+              <div class="column__text">
+                Работаем строго по установленный срокам, которые прописаны в договоре. Если не
+                успеваем - Вы платите меньше
+              </div>
+            </div>
+          </div>
+          <div drag-scroll-item class="benefits__column column">
+            <div class="column__images column__images_four">
+              <!-- <img src="../../assets/images/pig.png" alt="Экономьте на материалах"> -->
+            </div>
+            <div class="column__body">
+              <div class="column__sub-title">Экономьте на материалах</div>
+              <div class="column__text">Мы являемя структурным подразделением компании поставщика строительных смесей
+                <a href="#"> otherLink.toLink </a> и даём самые выгодные цены</div>
+            </div>
+          </div>
+        </drag-scroll>
+        <div class="benefits__rigth arrow">
+          <a (click)="moveRight()" style="cursor: pointer;"><img src="../../assets/images/benefits/next.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

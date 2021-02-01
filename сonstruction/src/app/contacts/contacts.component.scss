@@ -1,0 +1,127 @@
+@import "../../styles.scss";
+
+.contacts {
+  background: $light url(../../assets/images/contacts/contacts-bg.jpg) center no-repeat;
+  background-size: cover;
+
+  &__body {
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    span{
+      display: block;
+    }
+  }
+
+  // &__form {}
+}
+
+.info {
+  h2{
+    @include bold();
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+  p{
+    margin: 2rem 0;
+    font-size: 1.6rem;
+  }
+  &__link{
+    border-bottom: 1px dotted $text;
+    text-decoration: none;
+    color: $text;
+    &:hover{
+      color: darken($color: $text, $amount: 10%);
+    }
+  }
+  // &__locathion {}
+
+  // &__map {}
+
+  &__phone {
+    @include bold();
+  }
+
+  // &__money {}
+}
+.write {
+  padding: 4rem 5rem 4rem 5rem;
+  background: $light;
+  align-self:flex-start;
+  h2{
+    font-size: 1.9rem;
+    text-align: center;
+  }
+  &__form {
+    margin-top: 3.5rem;
+    &.action-form{
+      position: relative;
+    }
+  }
+  &__area{
+    border: 1px solid $border-input;
+    border-radius: 5px;
+    width: 100%;
+    resize: none;
+    height: 10rem;
+  }
+  &__btn {
+    margin-top: 3rem;
+    display: block;
+    padding: 2rem 4rem;
+  }
+}
+
+
+
+@media screen and (max-width: 1139px){
+  .contacts {
+    background-position: 0 0;
+    &__row {
+      flex-direction: column;
+    }
+    &__info {
+      text-align: center;
+    }
+  }
+  .write {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    &__btn {
+      margin: 3rem auto 3rem auto;
+    }
+  }
+}
+
+
+@media screen and (max-width: 710px){
+  .info {
+    &__map{
+      iframe{
+        width: 100%;
+      }
+    }
+  }
+  .write {
+    margin-top: 2rem;
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 520px){
+  .write {
+    width: 100%;
+    &__btn {
+     line-height: 1.5;
+     padding: 2rem 0;
+     width: 100%;
+   }
+  }
+}

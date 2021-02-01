@@ -1,0 +1,121 @@
+@import "../../styles.scss";
+
+
+.problems {
+  position: relative;
+
+  &__title {
+  }
+
+  &__body {
+  }
+
+  &__row {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: 40%;
+    border: 2px solid;
+    padding: 2rem;
+
+    &_good {
+      border-color: $icons-color;
+      ul{
+        li{
+          &:before{
+            background: url(../../assets/images/problems/checked.png) no-repeat center center;
+          }
+        }
+      }
+    }
+
+    &_bad {
+      border-color: $problems-color;
+      h4{
+        opacity: 0.5;
+      }
+      ul{
+        li{
+          &:before{
+            background: url(../../assets/images/problems/cancel.png) no-repeat center center;
+            background-size: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  &__woman{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30rem;
+    margin-left: -4rem;
+  }
+}
+
+.column {
+  &__headding {
+    font-size: 2.1rem;
+    @include bold();
+  }
+
+  &__list {
+    padding: 2rem 0 0 0;
+    li{
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 3.5rem;
+      font-size: 1.4rem;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 970px){
+  .problems {
+    &__woman{
+      width: 25rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 835px){
+  .problems {
+    &__woman{
+      display: none;
+    }
+    &__row {
+      flex-direction: column;
+    }
+    &__column{
+      width: 100%;
+      &_good{
+        margin-top: 5rem;
+      }
+    }
+  }
+  .column {
+    &__headding {
+      text-align: center;
+    }
+  }
+}
