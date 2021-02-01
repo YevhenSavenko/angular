@@ -1,0 +1,92 @@
+<div class="catalog-products">
+  <div class="container">
+    <div class="catalog-products__path">
+      <ul fxLayout="row">
+        <li>
+          <a routerLink="/">Home</a>
+        </li>
+        <li routerLinkActive="catalog-products__active">
+          <a [routerLink]="['/', 'catalog']">Catalog</a>
+        </li>
+      </ul>
+    </div>
+
+    <app-filters></app-filters>
+
+    <div
+        class="catalog-products__catalog-products"
+        fxLayout = "row wrap"
+        fxLayoutAlign = "space-between"
+        fxLayoutAlign.lt-lg = "space-around"
+        [ngStyle] = "{'marginTop':'30px'}"
+        >
+
+        <div fxFlex = "295px" *ngFor="let product of productsForEyes | slice: 0: 8">
+          <app-product-item [product]="product"></app-product-item>
+        </div>
+
+        <div fxFlex = "100%" [ngStyle] = "{'marginBottom':'60px'}">
+          <app-recommendation></app-recommendation>
+        </div>
+
+        <div fxFlex = "232px" *ngFor="let product of productsForEyes | slice:8">
+          <app-product-item [product]="product"></app-product-item>
+        </div>
+    </div>
+          
+
+    <div class = "catalog-products__pages">
+      <div fxLayout = "row" fxLayout.lt-md = "column" fxLayoutGap = "41px">
+        <div fxLayout = "row" fxLayoutGap = "20px" fxHide.lt-sm fxFlexAlign = "start" fxFlexAlign.lt-md = "center">
+          <fa-icon [icon]="faChevronLeft" class = "catalog-products__number-page"></fa-icon>
+          <span class = "catalog-products__number-page catalog-products__number-page_active">1</span>
+          <span class = "catalog-products__number-page">2</span>
+          <span class = "catalog-products__number-page">3</span>
+          <span class = "catalog-products__number-page">4</span>
+          <fa-icon [icon]="faChevronRight" class = "catalog-products__number-page"></fa-icon>
+        </div>
+        <div 
+          class="catalog-products__show" 
+          fxFlexAlign = "start" 
+          fxFlexAlign.lt-sm = "center" 
+          fxHide fxShow.lt-sm>
+          Show more
+        </div>
+        <div fxFlexAlign = "center">
+          Showing 1 to 2 of 90 (4 Pages)
+        </div>
+      </div>
+    </div>
+
+    <div
+    class="catalog-products__title-news"
+    fxLayout = "column"
+    fxLayoutAlign="start"
+    >
+      <h2 fxFlexAlign="start">Eyeshadow <b fxHide.lt-sm>Palettes</b></h2>
+      <div>
+        <p class = "catalog-products__news-block">
+          System occasionally except of all annoying human some who all will,
+          annoying trivial dislikes, physical, anyone, with from but explain,
+          pleasure. Rejects, resultant was human and explorer are obtain explain
+          is how any and great do again truth born. Man human the itself born
+          except some explorer system obtain who how. From give any system explain
+          in nor pleasure idea account undertakes rationally are pleasure because
+          no man any physical explain of it builder. Those itself desires master:
+          undertakes any explain all is complete loves not great are all no. <span fxHide.lt-md fxShow.lt-sm> Toil,
+          denouncing, some because us idea resultant painful: or who was praising,
+          loves. </span>
+        </p>
+        <p class = "catalog-products__news-block">
+          Of produces is complete happiness chooses occur explorer because
+          master — praising take from. <span fxHide.lt-sm>Right explorer do not occur it idea itself
+          fault toil but, occasionally, expound encounter expound itself. Itself
+          man us undertakes those account there physical happiness circumstances
+          ever of do idea, undertakes builder know right was because.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <app-brands></app-brands>
+</div>
+

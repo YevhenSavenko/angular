@@ -1,0 +1,44 @@
+<div class="media-product" fxLayout = "row" fxLayout.lt-lg = "column" fxLayoutAlign = "space-between">
+  <div class="media-product__video" fxLayoutAlign.lt-lg = "center">
+    <iframe
+      #media
+      width="736"
+      height="550"
+      src="https://www.youtube.com/embed/99PRs0Ee4Zg"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="media-product__photo" fxLayout = "column" fxLayoutGap = "20px" fxHide.lt-lg>
+    <div fxLayout = "row" fxLayoutGap = "20px"> 
+      <img src="/assets/images/item/photo-page/image1.png" alt="">
+      <img src="/assets/images/item/photo-page/image2.png" alt="">
+    </div>
+    <div fxLayout = "row" fxLayoutGap = "20px"> 
+      <img src="/assets/images/item/photo-page/image3.png" alt="">
+      <img src="/assets/images/item/photo-page/image4.png" alt="">
+    </div>
+    <div fxLayout = "row" fxLayoutGap = "20px"> 
+      <img src="/assets/images/item/photo-page/image5.png" alt="">
+      <img src="/assets/images/item/photo-page/image6.png" alt="">
+    </div>
+  </div>
+
+  <div class = "media-product__wrapper"fxHide fxShow.lt-lg fxLayoutAlign = "center">
+    <drag-scroll 
+      #photo 
+      class="media-product__slider" 
+      [ngStyle]="{ 'maxWidth': getWidthDrag(media)}"
+      >
+      <fa-icon [icon]="faChevronLeft" (click)="moveLeft()" class = " media-product__icons media-product__icons_left" ></fa-icon>
+      <img drag-scroll-item src="/assets/images/item/photo-page/image1.png"/>
+      <img drag-scroll-item src="/assets/images/item/photo-page/image2.png"/>
+      <img drag-scroll-item src="/assets/images/item/photo-page/image3.png"/>
+      <img drag-scroll-item src="/assets/images/item/photo-page/image4.png"/>
+      <img drag-scroll-item src="/assets/images/item/photo-page/image5.png"/>
+      <img drag-scroll-item src="/assets/images/item/photo-page/image6.png"/>
+      <fa-icon [icon]="faChevronRight" (click)="moveRight()" class = "media-product__icons media-product__icons_right"></fa-icon>
+    </drag-scroll>
+  </div>
+</div>

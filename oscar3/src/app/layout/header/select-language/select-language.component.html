@@ -1,0 +1,24 @@
+<div class="locate">
+  <div class="locate__select select" fxFlexAlign="center">
+    <button class="select__language" mat-button [matMenuTriggerFor]="menu" #openArrowLanguage="matMenuTrigger">
+      <div class="select__image"></div>
+      <span>
+        English
+      </span>
+      <div class="select__arow" [class.facilities__arrow-up]="openArrowLanguage.menuOpen"></div>
+    </button>
+    <mat-menu
+      #menu="matMenu"
+      backdropClass="select__menu"
+      class="mat-elevation-z0"
+      xPosition="before"
+    >
+      <button mat-menu-item>
+        <span class="select__language_name">German</span>
+      </button>
+      <button mat-menu-item>
+        <span class="select__language_name">French</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+@import "~@angular/material/theming";
+@include mat-core();
+$oscar3-primary: mat-palette($mat-indigo);
+$oscar3-accent: mat-palette($mat-pink, A200, A100, A400);
+$oscar3-warn: mat-palette($mat-red);
+$oscar3-theme: mat-light-theme(
+  (
+    color: (
+      primary: $oscar3-primary,
+      accent: $oscar3-accent,
+      warn: $oscar3-warn,
+    ),
+  )
+);
+
+@include angular-material-theme($oscar3-theme);
+
+@import "./assets/scss/reset.scss";
+@import "./assets/scss/params.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  @include RobotoSlabRegular();
+  font-size: 16px;
+}
+
+.container {
+  min-width: 320px;
+  box-sizing: border-box;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+
+
+/* Stars */
+
+.rating-mini {
+  display: inline-block;
+  font-size: 0;
+}
+.rating-mini span {
+  padding: 0;
+  font-size: 25px;
+  line-height: 1;
+  color: $text-through;
+}
+.rating-mini > span:before {
+  content: "★";
+}
+.rating-mini > span.active {
+  color: $stars;
+}

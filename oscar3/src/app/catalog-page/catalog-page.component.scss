@@ -1,0 +1,102 @@
+@import "src/assets/scss/params.scss";
+
+.catalog-products{
+  margin-top: 40px;
+
+  &__path {
+    a {
+      @include RobotoSlabRegular();
+      margin-right: 25px;
+      color: $text-color;
+      text-decoration: none;
+    }
+    ul {
+      list-style-type: disc;
+      li {
+        padding: 0 14px 0 8px;
+        &:first-child {
+          padding-left: 0;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  &__active {
+    a {
+      color: $text-through;
+    }
+  }
+  
+  &__pages{
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  &__number-page{
+    cursor: pointer;
+    font-size: 24px;
+    color: $text-color;
+    padding: 17px 23px;
+    border: 1px solid $like-border;
+    &:hover{
+      color: $bg;
+      background-color: $like-border;
+    }
+  }
+
+  &__number-page_active{
+    color: $like-border;
+    &:hover{
+      color: $like-border;
+      background-color: $bg;
+    }
+  }
+
+  &__show{
+    font-size: 20px;
+    padding: 22px 90px;
+    border: 1px solid $like-border;
+  }
+
+  &__title-news {
+    margin-bottom: 77px;
+    h2{
+      margin-bottom: 30px;
+      position: relative;
+      @include RobotoSlabBold(); 
+      font-size: 36px;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 43px;
+        height: 1px;
+        background: $like-border;
+        right: -80px;
+        top: 50%;
+      }
+    }
+  }
+
+  &__news-block{
+    @include RobotoRegular();
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .catalog-products{ 
+    &__title-news {
+      h2{
+        &:after{
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+

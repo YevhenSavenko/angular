@@ -1,0 +1,158 @@
+<div class="filters" fxLayout="row wrap">
+  <div
+    class="filters__title"
+    fxFlex="auto"
+    fxFlex.lt-lg="100%"
+    fxLayoutAlign="start"
+  >
+    <h2>Eyeshadow <b fxHide.lt-sm>Palettes</b></h2>
+  </div>
+  <div
+    class="filters__by"
+    fxLayout="row"
+    fxFlexAlign="center"
+    fxFlex.lt-lg="100%"
+  >
+    <div class="filters__headding">Sort By:</div>
+    <div class="filters__ranking" fxLayout="row">
+      <div class="filters__top filters__top_active-link">Top Ranking</div>
+      <div
+        class="filters__arrow"
+        fxFlexAlign="center"
+        fxHide
+        fxShow.lt-sm
+      ></div>
+    </div>
+
+    <div 
+      class="filters__price" 
+      fxLayout="row" 
+      fxHide.lt-sm 
+      >
+      <div class="filters__price-title filters__go">Price</div>
+      <div class="filters__arrow" fxFlexAlign="center"></div>
+    </div>
+
+    <div class="filters__popular" fxLayout="row" fxHide.lt-sm>
+      <div class="filters__popular-title filters__go">Popular</div>
+      <div class="filters__arrow" fxFlexAlign="center"></div>
+    </div>
+
+    <div
+      class="filters__options"
+      fxLayout="row"
+      fxFlex.lt-lg="1 1 auto"
+      fxLayoutAlign="end"
+      [matMenuTriggerFor]="menuFilters"
+      #openFilter="matMenuTrigger"
+    >
+      <div class="filters__options-title filters__go">Filter <span fxHide.lt-sm>options</span></div>
+      <div class="filters__arrow" fxFlexAlign="center" [class.filters__arrow_up]="openFilter.menuOpen"></div>
+    </div>
+    
+    <mat-menu
+    #menuFilters
+    xPosition="before"
+    class="mat-elevation-z0"
+    backdropClass="filters__options-menu">
+
+    <div (click)="handleClick($event)" class ="filters__control">
+      <div 
+        class = "filters__select" 
+        fxLayout = "row" 
+        fxLayoutAlign = "space-between">
+        <button mat-menu-item (click)="togglePrice = !togglePrice" disableRipple = "true" fxFlex = "auto">Price</button>
+        <div 
+          class = "filters__arrow_down" 
+          [ngClass]="{filters__arrow_up: togglePrice}"
+          fxFlexAlign = "center">
+        </div>
+    </div>
+
+    <div 
+      class = "filters__checked" 
+      [ngClass]="{filters__checked_price: togglePrice}" 
+      > 
+        <mat-checkbox class = "filters__confirm">$0.00 - $99.99</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">$100.00 - $199.99</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">$200.00 - $299.99</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">$800.00 and above</mat-checkbox>
+    </div>
+
+    <div 
+      class = "filters__select" 
+      fxLayout = "row" 
+      fxLayoutAlign = "space-between">
+      <button mat-menu-item (click)="toggleBrand = !toggleBrand" disableRipple = "true" fxFlex = "auto">Brand</button>
+        <div 
+          class = "filters__arrow_down" 
+          [ngClass]="{filters__arrow_up: toggleBrand}"
+          fxFlexAlign = "center">
+        </div>
+    </div>
+
+    <div 
+      class = "filters__checked" 
+      [ngClass]="{filters__checked_brands: toggleBrand}" 
+      >
+      <div fxLayout = "column">
+        <mat-checkbox class = "filters__confirm">Apple</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">Samsung</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">Xiaomi</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">Nikon</mat-checkbox>
+      </div>
+    </div>
+
+    <div 
+      class = "filters__select" 
+      fxLayout = "row" 
+      fxLayoutAlign = "space-between">
+      <button mat-menu-item (click)="toggleColor = !toggleColor" disableRipple = "true" fxFlex = "auto">Color</button>
+        <div 
+          class = "filters__arrow_down" 
+          [ngClass]="{filters__arrow_up: toggleColor}"
+          fxFlexAlign = "center">
+        </div>
+    </div>
+
+    <div 
+      class = "filters__checked" 
+      [ngClass]="{filters__checked_colors: toggleColor}" 
+      >
+      <div fxLayout = "column">
+        <mat-checkbox class = "filters__confirm">Red</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">White</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">Orange</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">Blue</mat-checkbox>
+      </div>
+    </div>
+
+    <div 
+      class = "filters__select" 
+      fxLayout = "row" 
+      fxLayoutAlign = "space-between">
+      <button mat-menu-item (click)="toggleManufacturer = !toggleManufacturer" disableRipple = "true" fxFlex = "auto">Manufacturer</button>
+        <div 
+          class = "filters__arrow_down" 
+          [ngClass]="{filters__arrow_up: toggleManufacturer}"
+          fxFlexAlign = "center">
+        </div>
+    </div>
+    
+
+    <div 
+    class = "filters__checked" 
+    [ngClass]="{filters__checked_manufacturer: toggleManufacturer}" 
+    >
+      <div fxLayout = "column">
+        <mat-checkbox class = "filters__confirm">BY</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">USA</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">CN</mat-checkbox>
+        <mat-checkbox class = "filters__confirm">BL</mat-checkbox>
+      </div>
+    </div>
+  </div>
+  </mat-menu>
+
+  </div>
+</div>

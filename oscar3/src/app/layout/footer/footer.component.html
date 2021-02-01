@@ -1,0 +1,297 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__line">
+      <div class="footer__rt">
+        <div
+          class="footer__content"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-between"
+        >
+          <div
+            class="footer__questions"
+            fxLayout="column"
+            fxLayout.lt-lg="row"
+            fxLayout.lt-sm="column"
+            fxFlex="200px"
+            fxFlex.lt-lg="66%"
+            fxFlex.lt-md="100%"
+            fxFlexOrder="1"
+          >
+            <div
+              class="footer__logo"
+              fxFlex.lt-lg="50%"
+              fxFlex.lt-sm="100%"
+              fxFlexAlign.lt-lg="center"
+              fxLayoutAlign.lt-sm="center"
+            >
+              <a routerLink = "/"><img src="/assets/images/footer/footer-logo.png" alt="" /></a>
+            </div>
+            <div
+              fxFlex.lt-lg="50%"
+              fxFlex.lt-sm="auto"
+              fxFlexAlign.lt-lg="center"
+              fxLayoutAlign.lt-md="end"
+              fxLayoutAlign.lt-sm="center"
+              fxFlexAlign.lt-sm="center"
+            >
+              <div
+                class="footer__call"
+                fxLayout="row"
+                fxLayoutAlign="start"
+                fxFlex.lt-lg="200px"
+              >
+                <div class="footer__image" fxFlexAlign="center">
+                  <img src="/assets/images/footer/phone.png" alt="" />
+                </div>
+                <div class="footer__phone" fxLayout="column">
+                  <div class="footer__got">Got Questions?</div>
+                  <div class="footer__number">8 800 551 12 44</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__copywrite" fxHide.lt-lg>
+              Copyright © 2019 by RTCart Themes Template.
+            </div>
+          </div>
+
+          <div
+            class="footer__categories"
+            fxLayoutAlign="center"
+            fxFlexAlign="start"
+            fxFlexAlign.lt-lg="end"
+            fxFlex.lt-lg="140px"
+            fxFlex.lt-sm="100%"
+            fxLayout="column"
+            fxFlexOrder="2"
+            fxFlexOrder.lt-sm="3"
+            fxFlexOrder.lt-lg="5"
+            fxFlexOrder.lt-md="3"
+          >
+            <div class="footer__show-categories" (click)="toggle = !toggle">
+              <div
+                class="footer__categories-title"
+                [ngClass]="{ footer__categories_title_none: toggle }"
+              >
+                Categories
+              </div>
+              <div
+                class="footer__categories-link"
+                [ngClass]="{ footer__categories_link_show: toggle }"
+              >
+                <div class="footer__hide" fxLayout="column">
+                  <a href=""> Value of the Day </a>
+                  <a href=""> Top 100 Offers </a>
+                  <a href=""> New Arrivals </a>
+                  <a href=""> Skincare </a>
+                  <a href=""> Bath & Body </a>
+                  <a href=""> Natural Beauty </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="footer__information"
+            fxFlexAlign="start"
+            fxFlexAlign.lt-lg="end"
+            fxLayoutAlign="center"
+            fxLayout="column"
+            fxFlexOrder="3"
+            fxFlexOrder.lt-sm="4"
+            fxFlexOrder.lt-lg="6"
+            fxFlexOrder.lt-md="4"
+            fxFlex.lt-lg="140px"
+            fxFlex.lt-sm="100%"
+          >
+            <div class="footer__show-categories" (click)="toggle2 = !toggle2">
+              <div
+                class="footer__information-title"
+                [ngClass]="{ footer__categories_title_none: toggle2 }"
+              >
+                Information
+              </div>
+              <div
+                class="footer__information-link"
+                [ngClass]="{ footer__categories_link_show: toggle2 }"
+              >
+                <div class="footer__hide" fxLayout="column">
+                  <a href=""> About Us </a>
+                  <a href=""> FAQs </a>
+                  <a href=""> Terms of Use </a>
+                  <a href=""> Delivery information </a>
+                  <a href=""> Privacy & Policy </a>
+                  <a href=""> Orders & Returns </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            fxLayout="column"
+            fxLayout.lt-md="row"
+            fxLayout.lt-sm="column"
+            fxLayoutAlign.lt-md="space-between"
+            fxFlex.lt-md="100%"
+            fxLayoutGap="39px"
+            fxLayoutGap.lt-sm="0px"
+            fxFlexOrder="4"
+            fxFlexOrder.lt-lg="2"
+            fxFlexOrder.lt-md="6"
+            fxFlexOrder.lt-sm="2"
+          >
+            <div
+              class="footer__safe"
+              fxHide.lt-lg
+              fxShow.lt-md
+              fxFlexOrder="1"
+              fxFlexOrder.lt-sm="2"
+            >
+              <div class="footer__safe-title" fxLayout="column" fxHide.lt-md>
+                Safe Payments
+              </div>
+              <div
+                class="footer__safe-images"
+                fxLayout="row"
+                fxLayoutGap="20px"
+                fxLayoutAlign.lt-sm="center"
+              >
+                <img src="/assets/images/footer/visa.png" alt="visa" />
+                <img src="/assets/images/footer/western.png" alt="western" />
+                <img src="/assets/images/footer/amason.png" alt="amason" />
+              </div>
+            </div>
+
+            <div
+              class="footer__follow"
+              fxLayout="column"
+              fxFlex.lt-lg="50%"
+              fxFlex.lt-md="250px"
+              fxFlex.lt-sm="auto"
+              fxFlexAlign.lt-lg="center"
+              fxFlexAlign.lt-md="end"
+              fxFlexAlign.lt-sm="center"
+              fxFlexOrder="2"
+              fxFlexOrder.lt-sm="1"
+            >
+              <div class="footer__follow-title" fxLayout="column" fxHide.lt-lg>
+                Follow Us
+              </div>
+              <div
+                class="footer__follow-images"
+                fxLayout="row"
+                fxLayoutGap="11px"
+                fxFlexAlign.lt-lg="center"
+              >
+                <img src="/assets/images/footer/facebook.png" alt="facebook" />
+                <img src="/assets/images/footer/twiter.png" alt="twiter" />
+                <img src="/assets/images/footer/insta.png" alt="instagram" />
+                <img src="/assets/images/footer/youtube.png" alt="youtube" />
+                <img
+                  src="/assets/images/footer/pinterest.png"
+                  alt="pinterest"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="footer__sing-up"
+            fxFlexOrder="5"
+            fxFlexOrder.lt-lg="4"
+            fxFlexOrder.lt-md="2"
+            fxFlexOrder.lt-sm="5"
+            fxFlex.lt-lg="auto"
+            fxFlex.lt-sm="100%"
+            fxLayout="column"
+            fxLayoutAlign.lt-md="space-between"
+            fxLayoutAlign.lt-sm="start center"
+          >
+            <div class="footer__sing-up-title">
+              Sign up to Newsletter
+              <span class="footer__sing-up-coupon">and receive $20 coupon</span>
+            </div>
+            <div class="footer__sing-up-content" fxLayout="column">
+              <!-- <div class="footer__sing-up-coupon">and receive $20 coupon</div> -->
+              <div class="footer__make">
+                Make sure you never miss out on the <br />
+                latest news from RTCart, just enter your <br />
+                details and we'll keep you updated.
+              </div>
+              <div class="footer__send" fxLayout="row">
+                <div class="footer__send-email">
+                  <input type="text" placeholder="Enter you email adress" />
+                </div>
+                <div class="footer__send-image">
+                  <img src="/assets/images/footer/paper.png" alt="send" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="footer__sub-menu"
+            fxLayout="row"
+            fxLayout.lt-sm="row wrap"
+            fxFlexAlign="center"
+            fxFlexOrder="6"
+            fxFlexOrder.lt-lg="8"
+            fxFlexOrder.lt-md="5"
+            fxFlexOrder.lt-sm="6"
+            fxFlex.lt-md="100%"
+            fxLayoutGap="35px"
+            fxLayoutGap.lt-md="18px"
+            fxLayoutGap.lt-sm="10px"
+          >
+            <a href="">Terms Of Use</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Interest-Based Ads</a>
+            <a href="">Welg</a>
+          </div>
+
+          <div
+            class="footer__safe"
+            fxHide
+            fxShow.lt-lg
+            fxHide.lt-md
+            fxFlexAlign.lt-lg="end"
+            fxFlexOrder="100"
+            fxFlexOrder.lt-lg="9"
+          >
+            <div class="footer__safe-images" fxLayout="row" fxLayoutGap="15px">
+              <img src="/assets/images/footer/visa.png" alt="visa" />
+              <img src="/assets/images/footer/western.png" alt="western" />
+              <img src="/assets/images/footer/amason.png" alt="amason" />
+            </div>
+          </div>
+
+          <div
+            class="footer__copywrite"
+            fxHide
+            fxShow.lt-lg
+            fxFlex.lt-lg="40%"
+            fxFlex.lt-md="auto"
+            fxFlexOrder="100"
+            fxFlexOrder.lt-lg="10"
+            fxFlexOrder.lt-md="7"
+            fxFlexOrder.lt-sm="6"
+          >
+            Copyright © 2019 by RTCart Themes Template.
+            <span fxHide fxShow.lt-sm>... for crafting to the future </span>
+          </div>
+
+          <div
+            class="footer__crafting"
+            fxFlexOrder="7"
+            fxFlexOrder.lt-lg="11"
+            fxFlexOrder.lt-md="8"
+            fxFlexOrder.lt-sm="7"
+            fxHide.lt-sm
+            fxFlexAlign="end"
+          >
+            ... for crafting to the future
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

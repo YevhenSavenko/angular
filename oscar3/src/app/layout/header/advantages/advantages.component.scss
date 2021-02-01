@@ -1,0 +1,50 @@
+@import "src/assets/scss/params.scss";
+
+.advantages {
+  background: $bg-brands;
+  &__row {
+    padding: 20px 0;
+  }
+
+  &__item {
+    padding: 4px 33px;
+    border-left: 1px solid $text-through;
+    &:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    img {
+      margin-right: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .advantages {
+    &__item {
+      padding: 4px 29px;
+    }
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  .advantages {
+    &__item {
+      padding: 4px 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 741px) {
+  .advantages {
+    &__item{
+      &_shipping{
+        position: absolute;
+        opacity: 0;
+      }
+    }
+  }
+}

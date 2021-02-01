@@ -1,0 +1,304 @@
+<div class="goods">
+  <div class="container">
+    <div class="goods__path">
+      <ul fxLayout="row">
+        <li>
+          <a routerLink="/">Home</a>
+        </li>
+        <li>
+          <a>Face</a>
+        </li>
+        <li routerLinkActive="goods__active-links">
+          <a routerLink="/item/3">Antonym Cosmetics Baked Foundation 8.5g</a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="goods__about"
+      fxLayout="row"
+      fxLayout.lt-lg="row wrap"
+      fxLayoutGap="20px"
+    >
+      <app-collage fxFlex="50%" fxFlex.lt-lg="100%" fxHide.lt-lg></app-collage>
+
+      <div class="goods__select" fxFlex="50%" fxFlex.lt-lg="100%">
+        <div>
+          <div class="goods__select-title">
+            <h2>Antonym Cosmetics Baked Endless Summer Foundation 8.5g</h2>
+          </div>
+          <div class="goods__find" fxLayout="row" fxLayoutAlign="space-between">
+            <div fxLayout="row" fxLayoutGap="56px">
+              <div class="goods__id" fxFlexAlign="center">#1363744</div>
+              <div
+                class="goods__reviews"
+                fxLayout="row"
+                fxLayoutGap="15px"
+                fxHide.lt-sm
+              >
+                <div class="goods__rating rating-mini" fxFlexAlign="end">
+                  <ng-container *ngFor="let star of stars">
+                    <span class="active" *ngIf="rating >= star"></span>
+                  </ng-container>
+                  <ng-container *ngFor="let star of stars">
+                    <span *ngIf="star <= maxStar - rating"></span>
+                  </ng-container>
+                </div>
+                <div class="goods__appraisal" fxFlexAlign="center">
+                  10 reviews
+                </div>
+              </div>
+            </div>
+            <div class="goods__wish" fxLayout="row" fxLayoutGap="10px">
+              <div class="goods__like" fxFlexAlign="center"></div>
+              <div class="goods__add" fxFlexAlign="center">Add to Wishlist</div>
+            </div>
+          </div>
+
+          <app-collage
+            class="goods__colage"
+            fxLayoutAlign="start"
+            fxLayoutAlign.lt-lg="center"
+            fxHide
+            fxShow.lt-lg
+          ></app-collage>
+
+          <div
+            class="goods__reviews"
+            fxLayout="row"
+            fxLayoutGap="15px"
+            fxHide
+            fxShow.lt-sm
+          >
+            <div class="goods__rating rating-mini" fxFlexAlign="end">
+              <ng-container *ngFor="let star of stars">
+                <span class="active" *ngIf="rating >= star"></span>
+              </ng-container>
+              <ng-container *ngFor="let star of stars">
+                <span *ngIf="star <= maxStar - rating"></span>
+              </ng-container>
+            </div>
+            <div class="goods__appraisal" fxFlexAlign="center">10 reviews</div>
+          </div>
+
+          <div
+            fxLayout="row"
+            fxLayout.lt-sm="column"
+            class="goods__take"
+            fxLayoutAlign="space-between"
+            fxLayoutGap="20px"
+            fxLayoutGap.lt-sm="0px"
+          >
+            <div class="goods__select-size" fxLayout="column" fxFlex="50%">
+              <div class="goods__label">Size</div>
+              <div
+                #elementIWantWidthOf
+                class="goods__params"
+                fxLayout="row"
+                fxLayoutAlign="space-between"
+                [matMenuTriggerFor]="menuSize"
+                #openSize="matMenuTrigger"
+              >
+                <div class="goods__menu">{{sizeDafault}}</div>
+                <div
+                  class="goods__arrow"
+                  fxFlexAlign="center"
+                  [class.goods__closed]="openSize.menuOpen"
+                ></div>
+              </div>
+
+              <mat-menu
+                #menuSize="matMenu"
+                yPosition="below"
+                backdropClass="goods__menu-size"
+                class="mat-elevation-z0"
+              >
+                <button
+                  mat-menu-item
+                  *ngFor="let size of sizes"
+                  [ngStyle]="{ minWidth: getWidth(elementWidth) }"
+                  (click)="selectSize(size)"
+                >
+                  {{ size }}
+                </button>
+              </mat-menu>
+            </div>
+
+            <div
+              #elementWidth
+              class="goods__select-color"
+              fxLayout="column"
+              fxFlex="50%"
+              [matMenuTriggerFor]="menuColor"
+              #openColor="matMenuTrigger"
+            >
+              <div class="goods__label">Color</div>
+              <div
+                class="goods__params"
+                fxLayout="row"
+                fxLayoutAlign="space-between"
+              >
+                <div class="goods__menu">{{colorDafault}}</div>
+                <div
+                  class="goods__arrow"
+                  fxFlexAlign="center"
+                  [class.goods__closed]="openColor.menuOpen"
+                ></div>
+              </div>
+            </div>
+
+            <mat-menu
+              #menuColor="matMenu"
+              yPosition="below"
+              backdropClass="goods__menu-size"
+              class="mat-elevation-z0"
+            >
+              <button
+                mat-menu-item
+                *ngFor="let color of colors"
+                [ngStyle]="{ minWidth: getWidth(elementWidth) }"
+                (click)="selectColor(color)"
+              >
+                {{ color }}
+              </button>
+            </mat-menu>
+          </div>
+
+          <div
+            class="goods__by"
+            fxLayoutAlign="space-between"
+            fxLayout="row"
+            fxLayout.lt-sm="column"
+            fxLayoutGap="0"
+            fxLayoutGap.lt-sm="30px"
+          >
+            <div
+              class="goods__price"
+              fxLayout="column"
+              fxLayoutAlign="space-between"
+              fxFlex.lt-sm="100%"
+              fxLayoutGap.lt-sm="20px"
+            >
+              <div fxLayout="row" fxLayoutGap="21px">
+                <div class="goods__old-price">$2330</div>
+                <div class="goods__new-price">$2299</div>
+              </div>
+              <div class="goods__less">Less than 10 in stock</div>
+            </div>
+
+            <div
+              class="goods__buttons"
+              fxLayout="row"
+              fxLayoutGap="20px"
+              fxLayoutAlign="space-between"
+            >
+              <div class="goods__counter" fxLayoutAlign="center center">
+                <div fxLayout="row" fxLayoutGap="25px">
+                  <div class="goods__action" (click)="onDecr()">&minus;</div>
+                  <div class="goods__result" fxLayoutAlign="center">
+                    <span>{{ total }}</span>
+                  </div>
+                  <div class="goods__action" (click)="onIncr()">&#x2b;</div>
+                </div>
+              </div>
+              <div class="goods__cart-add" fxLayoutAlign="center center">
+                <span>Add to cart</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="goods__info" #elementWidthSelect>
+      <ul fxLayout = "row" fxLayoutGap = "50px" fxLayoutGap.lt-md = "30px" fxHide.lt-sm>
+        <li (click)="onDescription()" [ngClass]="{goods__info_active:description}"><a>Description</a></li>
+        <li (click)="onDetails()" [ngClass]="{goods__info_active:details}"><a><span fxHide.lt-md>Product details</span><span fxHide fxShow.lt-md>Details</span></a></li>
+        <li (click)="onPhotoVideo()" [ngClass]="{goods__info_active:photoVideo}"><a>Photo&Video <span fxHide.lt-md>product</span></a></li>
+        <li (click)="onReviews()" [ngClass]="{goods__info_active:reviews}"><a>Reviews</a></li>
+      </ul>
+
+      <div fxHide fxShow.lt-sm >
+        <div 
+          class = "goods__info-menu" 
+          [matMenuTriggerFor]="menuProduct" 
+          #openLinks="matMenuTrigger"
+          fxLayout = "row"
+          fxLayoutAlign = "space-between"
+          >
+          <div class="goods__select">{{ menuDefault }}</div>
+          <div 
+            class="goods__arrow-select" 
+            fxFlexAlign = "center" 
+            [class.goods__closed]="openLinks.menuOpen"
+            ></div>
+        </div>
+        <mat-menu 
+          #menuProduct="matMenu" 
+          backdropClass="goods__links-product"
+          class="mat-elevation-z0"
+          >
+          <button
+            mat-menu-item 
+            (click)="onDescription()" 
+            *ngIf="menuDefault !== menuProducts[0]"
+            [ngStyle]="{ 'minWidth': getWidthSelect(elementWidthSelect)}"
+            >{{ menuProducts[0] }}</button>
+          <button 
+            mat-menu-item 
+            (click)="onDetails()" 
+            *ngIf="menuDefault !== menuProducts[1]"
+            [ngStyle]="{ 'minWidth': getWidthSelect(elementWidthSelect)}"
+            >{{ menuProducts[1] }}</button>
+          <button
+            mat-menu-item 
+            (click)="onPhotoVideo()" 
+            *ngIf="menuDefault !== menuProducts[2]"
+            [ngStyle]="{ 'minWidth': getWidthSelect(elementWidthSelect)}"
+            >{{ menuProducts[2] }}</button>
+          <button
+            mat-menu-item 
+            (click)="onReviews()"
+            *ngIf="menuDefault !== menuProducts[3]"
+            [ngStyle]="{ 'minWidth': getWidthSelect(elementWidthSelect) }"
+            >{{ menuProducts[3] }}</button>
+        </mat-menu>
+      </div>
+    </div>
+
+    <div class = "goods__show-pages">
+      <div *ngIf="description" [@bounceRight]>
+        <app-description></app-description>
+      </div>
+
+      <div *ngIf="details" [@bounceRight]>
+        <app-details></app-details>
+      </div>
+
+      <div *ngIf="photoVideo" [@bounceRight]>
+        <app-photo-product></app-photo-product>
+      </div>
+
+      <div *ngIf="reviews" [@bounceRight]>
+        <app-reviews></app-reviews>
+      </div>
+    </div>
+
+
+    <div class="goods__similar">
+      <div class="goods__similar-title" fxLayoutAlign = "start" fxLayoutAlign.lt-sm = "center">
+        <h2>Similar products</h2>
+      </div>
+      <div 
+          fxLayout = "row wrap" 
+          fxLayoutAlign = "space-between"
+          fxLayoutAlign.lt-lg = "space-around"
+          >
+        <div fxFlex = "232px" *ngFor="let product of onSimilar">
+          <app-product-item [product]="product"></app-product-item>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

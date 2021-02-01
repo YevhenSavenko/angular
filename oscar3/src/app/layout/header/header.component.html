@@ -1,0 +1,135 @@
+<div class="header">
+  <div class="container">
+    <div
+      class="header__content"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-between"
+    >
+      <div
+        fxFlexAlign="start"
+        fxFlexOrder="1"
+        fxFlexOrder.lt-lg="1"
+        fxFlex.lt-md="1 1 auto"
+      >
+        <div class="header__phone phone" fxFlex.lt-md="0 0 auto">
+          <div class="phone__images"></div>
+          8 800 551 12 44
+        </div>
+      </div>
+
+      <div
+        class="header__be-found be-found"
+        fxFlex="1 1 auto"
+        fxFlexOrder="2"
+        fxHide.lt-md
+      >
+        <div class="be-found__picture"></div>
+        Demo Street Demo Store, France
+      </div>
+
+      <div
+        class="header__register register"
+        fxFlexAlign="start"
+        fxFlexAlign.lt-lg="center"
+        fxFlexOrder="3"
+        fxFlexOrder.lt-lg="7"
+        fxFlexOrder.lt-sm="6"
+      >
+        <div class="register__image"></div>
+        <a href="#">Register</a><span> or </span><a href="#">Sing in</a>
+      </div>
+
+      <div
+        class="header__wish wish"
+        fxFlexAlign="start"
+        fxFlexAlign.lt-sm="center"
+        fxFlexOrder="4"
+        fxFlexOrder.lt-lg="3"
+        fxFlexOrder.lt-sm="6"
+      >
+        <div class="wish__image" fxFlexAlign.lt-sm="center"></div>
+        <span fxHide.lt-md>Wish: </span>
+        <a href="#" fxHide.lt-sm>0 items</a>
+      </div>
+
+      <app-select-language
+        class="header__select"
+        fxFlexAlign="start"
+        fxFlexOrder="5"
+        fxFlexOrder.lt-lg="4"
+        fxFlexOrder.lt-sm="2"
+      ></app-select-language>
+
+      <div
+        class="header__break"
+        fxFlex="100%"
+        fxFlexOrder="6"
+        fxFlexOrder.lt-lg="5"
+        fxHide.lt-sm
+      ></div>
+
+      <div
+        class="header__wrapper"
+        fxLayout="row"
+        fxLayoutAlign.lt-sm="space-between"
+        fxLayoutAlign="start"
+        fxFlex.lt-lg="1 1 auto"
+        fxFlex.lt-sm="100%"
+        fxFlexOrder="7"
+        fxFlexOrder.lt-lg="6"
+        fxFlexOrder.lt-sm="3"
+      >
+        <div class="header__logo" fxFlex.lt-sm = "auto">
+          <a routerLink = "/"><img src="/assets/images/header/logo.svg" alt="logo" /></a>
+        </div>
+        <div
+          class="header__menu menu"
+          mat-button 
+          [matMenuTriggerFor]="menuBurger"
+          #openBurger="matMenuTrigger"
+          [class.header__menu-dark]="openBurger.menuOpen"
+          fxFlexAlign="center"
+          fxLayout="column"
+          fxLayoutGap="7px"
+        >
+          <span class="menu__block"></span>
+          <span class="menu__block"></span>
+          <span class="menu__block"></span>
+        </div>
+        <mat-menu #menuBurger = "matMenu" backdropClass="header__burger-menu" class="mat-elevation-z0" >
+          <button mat-menu-item>Home</button>
+          <button mat-menu-item>Features</button>
+          <button mat-menu-item>Deals</button>
+          <button mat-menu-item>Shop</button>
+          <button mat-menu-item>New Arriwals</button>
+          <button mat-menu-item>Blog</button>
+          <button mat-menu-item>About Us</button>
+          <button mat-menu-item>Contact Us</button>
+        </mat-menu>
+      </div>
+
+      <app-search-block
+        class="header__search"
+        fxFlexAlign="center"
+        fxFlex="1 1 auto"
+        fxFlex.lt-sm="0 0 auto"
+        fxFlex.lt-lg="100%"
+        fxFlexOrder="8"
+        fxFlexOrder.lt-lg="9"
+        fxFlexOrder.lt-sm="4"
+      ></app-search-block>
+
+      <app-basket
+        fxLayoutAlign="end"
+        fxFlexAlign="center"
+        fxFlex.lt-sm="1 1 auto"
+        fxFlexOrder="9"
+        fxFlexOrder.lt-lg="8"
+        fxFlexOrder.lt-sm="7"
+      ></app-basket>
+    </div>
+  </div>
+</div>
+
+<app-navigate></app-navigate>
+<app-advantages></app-advantages>

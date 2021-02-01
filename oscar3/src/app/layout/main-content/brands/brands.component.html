@@ -1,0 +1,25 @@
+<div class="brands">
+  <div class="container">
+    <div class="brands__title" fxLayoutAlign="center">
+      <h2>Our Brands</h2>
+    </div>
+    <div class="brands__scroll">
+      <div class="brands__list">
+        <drag-scroll #brands class="brands__slider">
+          <img drag-scroll-item src="/assets/images/brands/brand1.svg" />
+          <img drag-scroll-item src="/assets/images/brands/brand2.svg" />
+          <img drag-scroll-item src="/assets/images/brands/brand3.svg" />
+          <img drag-scroll-item src="/assets/images/brands/brand4.svg" />
+          <img drag-scroll-item src="/assets/images/brands/brand5.svg" />
+          <img drag-scroll-item src="/assets/images/brands/brand6.svg" />
+          <img drag-scroll-item src="/assets/images/brands/brand7.svg" />
+        </drag-scroll>
+
+        <div class="brands__arrows" fxLayoutGap = "30px" fxHide fxShow.lt-lg>
+          <fa-icon [icon]="faChevronLeft" (click)="moveLeft()" class = "brands__icons"></fa-icon>
+          <fa-icon [icon]="faChevronRight" (click)="moveRight()" class = "brands__icons"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

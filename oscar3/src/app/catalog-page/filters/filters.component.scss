@@ -1,0 +1,204 @@
+@import "src/assets/scss/params.scss";
+
+.filters {
+  margin-top: 36px;
+
+  &__title {
+    h2 {
+      margin-bottom: 0;
+      position: relative;
+      @include RobotoSlabBold();
+      font-size: 36px;
+      &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 43px;
+        height: 1px;
+        background: $like-border;
+        right: -80px;
+        top: 50%;
+      }
+    }
+  }
+
+  &__by {
+    font-size: 18px;
+  }
+
+  &__headding {
+    margin-right: 29px;
+  }
+
+  &__ranking {
+    margin-right: 34px;
+  }
+
+  &__top {
+    cursor: pointer;
+    &_active-link {
+      position: relative;
+      color: $page-color;
+      &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        bottom: -6px;
+        background: $page-color;
+      }
+    }
+  }
+
+  &__go {
+    position: relative;
+    &:hover {
+      &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        bottom: -6px;
+        background: $text-color;
+      }
+    }
+  }
+
+  &__price {
+    cursor: pointer;
+    margin-right: 35px;
+  }
+
+  // &__price-title {}
+
+  &__arrow {
+    margin: 3px 0 0 15px;
+    background: url("/assets/images/header/arrow-down.svg");
+    width: 10px;
+    height: 6px;
+  }
+
+  &__popular {
+    cursor: pointer;
+    margin-right: 60px;
+  }
+
+  // &__popular-title {}
+
+  &__options {
+    cursor: pointer;
+  }
+
+  // &__options-title {}
+
+  &__checked {
+    display: none;
+  }
+
+  &__checked {
+    &_price,
+    &_brands,
+    &_colors,
+    &_manufacturer {
+      max-width: 182px;
+      margin: 18px 0 0px 0;
+      display: block;
+
+      .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+      .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background-color: $bg !important;
+      }
+
+      .mat-checkbox-checkmark-path {
+        stroke: #000 !important;
+      }
+
+      .mat-checkbox-layout {
+        margin-bottom: 20px;
+      }
+    }
+    &_manufacturer {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__arrow_down {
+    background: url("/assets/images/header/arrow-down.svg") no-repeat right
+      center;
+    width: 10px;
+    height: 6px;
+  }
+
+  &__arrow_up {
+    background: url("/assets/images/header/arrow-up.svg") no-repeat right center;
+    width: 10px;
+    height: 6px;
+  }
+
+  &__select {
+    border-bottom: 1px solid $header-border;
+  }
+
+  &__control {
+    padding: 0px 20px;
+  }
+
+  &__options-menu + * .mat-menu-panel {
+    margin-top: 40px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+    min-width: 232px;
+    padding: 0;
+  }
+
+  &__options-menu + * .mat-menu-content:not(:empty) {
+    padding: 0;
+  }
+
+  &__options-menu + * button.mat-menu-item {
+    @include RobotoSlabRegular();
+    font-size: 20px;
+    padding: 0;
+    line-height: 0;
+    &:hover {
+      background: none;
+      color: $page-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .filters {
+    &__by {
+      margin-top: 31px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .filters {
+    &__headding {
+      display: none;
+    }
+    &__popular {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .filters {
+    &__ranking {
+      margin-right: 0;
+    }
+    &__title {
+      h2 {
+        &:after {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

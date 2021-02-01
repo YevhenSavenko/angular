@@ -1,0 +1,203 @@
+@import "src/assets/scss/params.scss";
+
+.news {
+  margin: 81px 0;
+
+  &__title {
+    h2 {
+      margin-bottom: 0;
+      position: relative;
+      color: $text-color;
+      @include RobotoSlabBold();
+      font-size: 36px;
+      &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 43px;
+        height: 1px;
+        background: $text-color;
+        right: -69px;
+        bottom: 12px;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 43px;
+        height: 1px;
+        background: $text-color;
+        left: -69px;
+        bottom: 12px;
+      }
+    }
+  }
+
+  &__ads {
+    margin-top: 41px;
+  }
+
+  &__soup{
+    background: url("/assets/images/news/soap.png");
+    background-size: cover;
+    width: 295px;
+    height: 350px;
+    outline: 2px solid $bg;
+    outline-offset: -20px;
+  }
+
+  &__image-set{
+    background: url("/assets/images/news/set.png");
+    background-size: cover;
+    width: 295px;
+    height: 165px;
+    outline: 2px solid $bg;
+    outline-offset: -20px;
+  }
+
+  &__image-arden{
+    background: url("/assets/images/news/arden.png");
+    background-size: cover;
+    width: 295px;
+    height: 165px;
+    outline: 2px solid $bg;
+    outline-offset: -20px;
+  }
+
+  &__expanded {
+    height: 350px;
+    border: 1px solid $header-border;
+  }
+
+  &__content {
+    padding: 30px 16px 0px 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  &__sub-content{
+    padding: 0;
+    margin: 0 0 0 20px;
+    .news__headding{
+      margin-bottom: 0;
+    }
+  }
+
+
+
+  &__date {
+    span {
+      @include RobotoRegular();
+      font-size: 14px;
+      padding: 10px;
+      background: $bg-brands;
+    }
+  }
+
+  &__headding {
+    cursor: pointer;
+    margin: 20px 0 25px 0;
+    font-size: 18px;
+    color: $page-color;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__body {
+    @include RobotoRegular();
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  // &__sub-ad {}
+
+  &__about-set {
+    border: 1px solid $header-border;
+  }
+
+  &__arden {
+    border: 1px solid $header-border;
+  }
+}
+
+
+@media screen and (max-width: 1279px) {
+  .news{
+    &__expanded {
+      height: 230px;
+    }
+    &__about-set{
+      height: 145px;
+    }
+    &__arden{
+      height: 145px;
+    }
+    &__soup{
+      height: 230px;
+    }
+  
+    &__image-set{
+      height: 145px;
+    }
+  
+    &__image-arden{
+      height: 145px;
+    }
+
+    &__body{
+      height: 50px;
+      overflow: hidden;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .news{
+    &__headding{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .news{
+
+    &__title {
+      h2 {
+        &:after{
+          display: none;
+        }
+        &:before{
+          display: none;
+        }
+      }
+    }
+
+    &__expanded, &__about-set, &__arden {
+      height: auto;
+    }
+
+    &__content{
+      padding-top: 0;
+    }
+
+    &__date{
+      position: absolute;
+      bottom: 8px;
+    }
+
+    &__soup,  &__image-set, &__image-arden{
+      position: relative;
+      width: 100%;
+      background-position: center;
+      height: 145;
+    }
+
+    &__content{
+      margin-bottom: 19px;
+      line-height: 26px;
+    }
+  }
+}

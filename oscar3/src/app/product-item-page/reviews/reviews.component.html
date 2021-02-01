@@ -1,0 +1,185 @@
+<div class="reviews">
+  <div class="reviews__customer">
+    <div class="reviews__card" fxLayout = "row" fxLayout.lt-sm = "column" *ngFor="let reviews of exposition">
+      <div class="reviews__avatar">
+        <img src={{reviews.images}} alt="photo">
+      </div>
+
+      <div class = "reviews__goods" fxLayout = "column" fxLayoutAlign = "space-between">
+        <div class="reviews__descript" fxLayout = "row" fxLayout.lt-md = "row wrap">
+          <div class="reviews__name" fxFlexOrder = "1"  fxFlexOrder.lt-md = "1">
+            {{ reviews.name }}
+          </div>
+          <div class="reviews__date"  fxFlexOrder = "2" fxFlexOrder.lt-md = "3" fxFlex.lt-md = "100%">
+            {{ calcDate(reviews.date) }} ago
+          </div>
+          <div class="reviews__rating rating-mini" fxFlex = "auto"  fxLayoutAlign = "end" fxFlexAlign.lt-sm = "start" fxFlexOrder = "3" fxFlexOrder.lt-md = "2">
+            <ng-container *ngFor="let star of stars">
+              <span class="active" *ngIf="reviews.rating >= star"></span>
+            </ng-container>
+            <ng-container *ngFor="let star of stars">
+              <span *ngIf="star <= stars.length - reviews.rating"></span>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="reviews__exposition" fxLayout = "column">
+          <div class="reviews__title">
+            {{reviews.title}}
+          </div>
+          <div class = "reviews__text">
+            {{reviews.reviews}}
+          </div>
+          <span class = "reviews__read-more" fxHide fxShow.lt-md>Read more</span>
+        </div>
+      </div>
+
+      <div class="reviews__rating-product" fxLayout = "column" fxLayoutAlign = "space-between" fxFlexAlign = "stretch" fxFlexAlign.lt-sm = "center" fxLayoutGap.lt-sm = "30px">
+        <div class="reviews__quality" fxLayout = "column">
+          <div class="reviews__sub-title">
+            Quality of Product
+          </div>
+          <div class="reviews__rectangle-rating" fxLayout = "row" fxLayoutGap = "2px">
+            <ng-container *ngFor="let star of stars">
+              <span class="reviews__rectangle-active" *ngIf="reviews.quality >= star"></span>
+            </ng-container>
+            <ng-container *ngFor="let star of stars">
+              <span *ngIf="star <= stars.length - reviews.quality"></span>
+            </ng-container>
+          </div>
+        </div>
+        <div class="reviews__quality" fxLayout = "column">
+          <div class="reviews__sub-title">
+            Value of Product
+          </div>
+          <div class="reviews__rectangle-rating" fxLayout = "row" fxLayoutGap = "2px">
+            <ng-container *ngFor="let star of stars">
+              <span class="reviews__rectangle-active" *ngIf="reviews.value >= star"></span>
+            </ng-container>
+            <ng-container *ngFor="let star of stars">
+              <span *ngIf="star <= stars.length - reviews.value"></span>
+            </ng-container>
+          </div>
+        </div>
+        <div class="reviews__quality" fxLayout = "column">
+          <div class="reviews__sub-title">
+            Result
+          </div>
+          <div class="reviews__rectangle-rating" fxLayout = "row" fxLayoutGap = "2px">
+            {{ getResult(reviews.quality, reviews.value) }}
+            <ng-container *ngFor="let star of stars">
+              <span class="reviews__rectangle-active" *ngIf="result >= star"></span>
+            </ng-container>
+            <ng-container *ngFor="let star of stars">
+              <span *ngIf="star <= stars.length - result"></span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "reviews__pages">
+      <div fxLayout = "row" fxLayout.lt-md = "column" fxLayoutGap = "41px">
+        <div fxLayout = "row" fxLayoutGap = "20px" fxHide.lt-sm fxFlexAlign = "start" fxFlexAlign.lt-md = "center">
+          <fa-icon [icon]="faChevronLeft" class = "reviews__number-page"></fa-icon>
+          <span class = "reviews__number-page reviews__number-page_active">1</span>
+          <span class = "reviews__number-page">2</span>
+          <span class = "reviews__number-page">3</span>
+          <span class = "reviews__number-page">4</span>
+          <fa-icon [icon]="faChevronRight" class = "reviews__number-page"></fa-icon>
+        </div>
+        <div class="reviews__show" fxFlexAlign = "start" fxFlexAlign.lt-sm = "center" fxHide fxShow.lt-sm>
+          Show more
+        </div>
+        <div fxFlexAlign = "center">
+          Showing 1 to 2 of 90 (4 Pages)
+        </div>
+      </div>
+    </div>
+
+
+    <div class="reviews__wrapper">
+      <div class="reviews__title-form" fxLayoutAlign = "start" fxLayoutAlign.lt-sm = "center">
+        <h2>Write A Review</h2>
+      </div>
+      </div>
+        <form class="reviews__form" fxLayout = "column" fxLayoutGap = "40px">
+          <div fxLayout = "row" fxLayout.lt-lg = "row wrap" fxLayoutAlign = "space-between" >
+            <div class = "reviews__title-write" fxFlex.lt-lg = "48%" fxFlex.lt-sm = "100%">
+              <mat-form-field fxFlex = "295px" fxFlex.lt-lg = "100%">
+                <mat-label class = "reviews__label">Title for your review*</mat-label>
+                <input matInput [formControl]="titleControl">
+                <mat-error *ngIf="titleControl.hasError('required')">
+                  Title is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class = "reviews__name" fxFlex.lt-lg = "48%" fxFlex.lt-sm = "100%">
+              <mat-form-field fxFlex = "295px" fxFlex.lt-lg = "100%">
+                <mat-label class = "reviews__label">Your name*</mat-label>
+                <input matInput [formControl]="nameControl">
+                <mat-error *ngIf="nameControl.hasError('required')">
+                  Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class = "reviews__email" fxFlex.lt-lg = "48%" fxFlex.lt-sm = "100%">
+              <mat-form-field fxFlex = "295px" fxFlex.lt-lg = "100%">
+                <mat-label class = "reviews__label">Your email*</mat-label>
+                <input matInput [formControl]="emailControl">
+                <mat-error *ngIf="emailControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+                <mat-error *ngIf="emailControl.hasError('email') && !emailControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class = "reviews__select-rating" fxFlex.lt-lg = "48%" fxFlex.lt-sm = "100%">
+              <div
+                #getWidth
+                class = "reviews__rating-menu"
+                fxLayout = "row"
+                fxFlex = "295px"
+                fxFlex.lt-lg = "100%"
+                fxLayoutAlign = "space-between"
+                fxFlexAlign = "center" 
+                [matMenuTriggerFor]="menuRating"
+                #openRaring="matMenuTrigger" 
+                >
+                <div class = "reviews__default">{{ defaultRating }}</div>
+                <div 
+                  class = "reviews__form-arrow"
+                  fxFlexAlign = "center" 
+                  [class.reviews__arrow_active]="openRaring.menuOpen"
+                  ></div>
+              </div>
+              <mat-menu 
+              #menuRating="matMenu" 
+              backdropClass="reviews__number"
+              class="mat-elevation-z0"
+              >
+                <button 
+                  mat-menu-item 
+                  *ngFor="let r of rating" 
+                  (click)="selectRating(r)"
+                  [ngStyle]="{ 'minWidth': getWidthSelect(getWidth) }"
+                  >{{ r }}</button>
+              </mat-menu>
+            </div>
+          </div>
+          <div class = "reviews__comments">
+            <mat-form-field fxFlex = "100%">
+              <mat-label class = "reviews__label">Write your comments here*</mat-label>
+              <textarea class = "reviews__area" matInput [formControl]="commentsControl"></textarea>
+              <mat-error *ngIf="commentsControl.hasError('required')">
+                Comments is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayoutAlign = "start" fxLayoutAlign.lt-sm = "center">
+            <button class = "reviews__btn">Save Review</button>
+          </div>
+        </form>
+      </div>
+    </div>

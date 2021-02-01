@@ -1,0 +1,296 @@
+@import "src/assets/scss/params.scss";
+
+.reviews {
+
+  // &__customer {}
+
+  &__card {
+    margin-bottom: 20px;
+    padding: 30px;
+    border: 1px solid $header-border;
+  }
+
+  &__avatar {
+    img{
+      max-width: 166px;
+      max-height: 166px;
+      min-width: 166px;
+      min-height: 166px;
+    }
+  }
+
+  &__goods{
+    padding: 0 40px 0 30px;
+    border-right: 1px solid $header-border;
+  }
+
+  // &__descript {}
+
+  // &__name {}
+
+  &__date {
+    @include RobotoSlabLight();
+    color: $like-border;
+    margin-left: 15px;
+  }
+
+  // &__rating {}
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  &__exposition {
+    @include RobotoRegular();
+    line-height: 25px;
+  }
+
+  &__rating-product {
+    padding-left: 50px;
+    max-height: 166px;
+  }
+
+  // &__quality {}
+
+  &__sub-title {
+    white-space: nowrap;
+    margin-bottom: 12px;
+  }
+
+  &__rectangle-rating {
+    span{
+      width: 35px;
+      height: 8px;
+      background: $text-through;
+    }
+    span.reviews__rectangle-active{
+      background: $stars;
+    }
+  }
+
+  &__read-more{
+    @include RobotoRegular();
+    color: $page-color;
+    cursor: pointer;
+  }
+
+  &__pages{
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  &__number-page{
+    cursor: pointer;
+    font-size: 24px;
+    color: $text-color;
+    padding: 17px 23px;
+    border: 1px solid $like-border;
+    &:hover{
+      color: $bg;
+      background-color: $like-border;
+    }
+  }
+
+  &__number-page_active{
+    color: $like-border;
+    &:hover{
+      color: $like-border;
+      background-color: $bg;
+    }
+  }
+
+  &__show{
+    font-size: 20px;
+    padding: 22px 90px;
+    border: 1px solid $like-border;
+  }
+
+  &__title-form{
+    margin-bottom: 40px;
+    h2{
+      position: relative;
+      font-size: 36px;
+      @include RobotoSlabBold();
+      margin-bottom: 0;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 43px;
+        height: 1px;
+        background: $text-color;
+        top: calc(50% - 0.5px);
+        right: -83px;
+      }
+    }
+  }
+
+  &__rating-menu{
+    padding-bottom: 5px;
+    border-bottom: 1px solid $like-border;
+  }
+
+  &__form-arrow{
+    background: url("/assets/images/header/arrow-down.svg") no-repeat center;
+    @include transitionBtn();
+    width: 15px;
+    height: 9px;
+  }
+
+  &__arrow_active{
+    @include transitionBtn();
+    transform: rotate(180deg);
+  }
+
+  &__area{
+    resize: none !important;
+  }
+  
+  &__label{
+    font-size: 18px;
+    @include RobotoSlabRegular();
+  }
+
+  &__default{
+    color: $text-color;
+    height: 21px;
+    font-size: 18px;
+  }
+
+  .mat-form-field-label{                                            // label normal style
+    color: $text-color !important;
+  }
+
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: rgb(255, 0, 0) !important
+  }
+
+  .mat-form-field-underline{                                        // underline normal style
+    background: $like-border !important;                                 
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {               // focused label
+    color: $page-color !important;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-ripple{               // focused underline
+    background-color: $page-color;
+  }
+
+  &__number + * .mat-menu-panel {
+    max-width: none;
+    min-width: none;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: -2px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+    min-height: 0;
+  }
+
+  &__number + * .mat-menu-content:not(:empty) {
+   padding: 0;
+  }
+
+  &__number + * button.mat-menu-item {
+    @include RobotoSlabRegular();
+    border-bottom: 1px solid $header-border;
+    font-size: 18px;
+    padding: 0;
+    line-height: 0;
+    &:hover{
+      background: none;
+      color: $page-color;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  &__btn{
+    @include btn();
+    padding: 20px 85px;
+  }
+}
+
+
+@media screen and (max-width: 1279px) {
+  .reviews {
+    &__avatar {
+      img{
+        display: none;
+      }
+    }
+    &__card {
+      padding: 20px;
+    }
+    &__goods{
+      padding: 0 40px 0 20px;
+    }
+    &__rating-product {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .reviews {
+    &__text{
+      height: 80px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &__date{
+      margin: 0 0 16px 0
+    }
+    &__rating{
+      margin-top: -3px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .reviews {
+    &__goods{
+      padding: 0 0 20px 0;
+      margin-bottom: 20px;
+      border-right: none;
+      border-bottom: 1px solid $header-border;
+    }
+    &__rating-product{
+      max-height: none;
+      padding-left: 0;
+    }
+    &__text{
+      max-height: 200px;
+    }
+    &__rectangle-rating { 
+      span{
+        width: 45px;
+      }
+    }
+    &__pages{
+      margin-top: 0px;
+    }
+    &__rating-menu{
+      margin-top: 23px;
+    }
+    &__title-form{
+      h2{
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .reviews {
+    &__btn{
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}

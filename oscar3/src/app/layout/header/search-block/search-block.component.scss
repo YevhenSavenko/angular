@@ -1,0 +1,122 @@
+@import "src/assets/scss/params.scss";
+
+.facilities {
+  padding: 13px 0;
+  border-left: 1px solid $header-border;
+  border-right: 1px solid $header-border;
+
+  &__search-wrapper {
+    padding: 9px 0px 5px 20px;
+    border-left: 1px solid $header-border;
+  }
+
+  &__search {
+    padding: 0 50px 0 29px;
+    position: relative;
+    input {
+      width: 320px;
+      border: 0;
+      &::placeholder {
+        font-size: 16px;
+        color: $text-color;
+      }
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+  }
+
+  // &__categories {}
+
+  &__arrow {
+    background: url("/assets/images/header/arrow-down.svg") no-repeat center 8px;
+    width: 10px;
+    height: 16px;
+    margin-left: 15px;
+  }
+
+  &__arrow-up {
+    background: url("/assets/images/header/arrow-up.svg") no-repeat center 8px;
+    width: 10px;
+    height: 16px;
+  }
+
+  &__search-image {
+    background: url("/assets/images/header/header/find.svg") no-repeat 0 0px;
+    height: 19px;
+    width: 19px;
+    background-size: 100%;
+    margin: 0px 30px 0 41px;
+    cursor: pointer;
+  }
+
+  &__select + * .mat-menu-panel {
+    padding: 0 20px;
+    min-width: 120px;
+    margin-top: 32px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+  }
+
+  &__select + * .mat-menu-content:not(:empty) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  &__select + * button.mat-menu-item {
+    padding: 0;
+    min-width: 200px;
+    border-bottom: 1px solid $header-border;
+    @include transitionBtn();
+    &:hover{
+      background: none;
+      color: $page-color;
+      @include transitionBtn();
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  &__button {
+    span {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .facilities {
+    border-left: none;
+    border-right: none;
+    &__search {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__search-image {
+      margin-right: 0;
+      margin-left: 45px;
+    }
+    &__select + * .mat-menu-panel {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .facilities {
+    &__search-wrapper {
+      padding: 0;
+      border-left: none;
+    }
+    &__search-image {
+      border-right: 1px solid $header-border;
+      padding-right: 20px;
+      background-size: 23px;
+      margin-left: 0px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.collage {
+  &__frame {
+    position: relative;
+    &:hover {
+      .collage__scroll-down {
+        display: block;
+      }
+    }
+  }
+
+  &__large-img {
+    position: relative;
+    &:hover {
+      .collage__arrows {
+        display: block;
+      }
+    }
+  }
+
+  &__frame-item{
+    img{
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__arrows {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__scroll-down {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+
+  &__scroll-left {
+    left: 30px;
+  }
+
+  &__scroll-right {
+    right: 30px;
+  }
+}
+
+
+@media screen and (max-width: 1279px) {
+  .collage{
+    &__large-img {
+      &:hover {
+        .collage__arrows {
+          display: none;
+        }
+      }
+    }
+    &__scroll-down {
+      display: block;
+      bottom: -27px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 599px) {
+  .collage{
+    &__arrows {
+      display: block;
+    }
+    &__scroll-left {
+      left: -13px;
+    }
+  
+    &__scroll-right {
+      right: -13px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .collage{
+    &__center-img{
+    width: 235px;
+    height: 235px;
+    }
+  }
+}

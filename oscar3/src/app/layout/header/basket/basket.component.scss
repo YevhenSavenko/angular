@@ -1,0 +1,165 @@
+@import "src/assets/scss/params.scss";
+
+.basket {
+  // &__shopping {}
+
+  &__image {
+    background: url("/assets/images/header/comerce.svg") no-repeat;
+    width: 21px;
+    height: 23px;
+    margin: 0 14px 0 43px;
+  }
+
+  &__total {
+    text-decoration: none;
+    color: $page-color;
+  }
+
+  &__share {
+    padding-left: 5px;
+  }
+
+  &__pay {
+    cursor: pointer;
+  }
+
+  &__arrow {
+    background: url("/assets/images/header/arrow-down.svg") no-repeat 0 5px;
+    width: 10px;
+    height: 16px;
+    margin-left: 15px;
+  }
+
+  &__arrow-up {
+    background: url("/assets/images/header/arrow-up.svg") no-repeat center 5px;
+    width: 10px;
+    height: 16px;
+  }
+
+  // &__block {}
+
+  &__confirm {
+    margin: 30px 20px;
+    width: 276px;
+    padding: 20px 42px 24px 42px;
+    color: $page-color;
+    border: 1px solid $page-color;
+    background: none;
+    font-size: 16px;
+    @include transitionBtn;
+    &:hover {
+      background: $page-color;
+      color: $bg;
+      @include transitionBtn;
+    }
+  }
+
+  &__empty {
+    h3 {
+      text-align: center;
+      padding: 50px;
+      font-size: 30px;
+      @include RobotoSlabBold();
+      text-transform: uppercase;
+      color: $text-through;
+      line-height: 1.5;
+    }
+  }
+
+  &__menu + * .mat-menu-panel {
+    min-width: 316px;
+    margin-top: 33px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__menu + * .mat-menu-content:not(:empty) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.content {
+  padding: 19px 20px 0 20px;
+  font-size: 14px;
+  &__image {
+    border: 1px solid $header-border;
+    cursor: pointer;
+  }
+
+  &__description {
+    margin-left: 23px;
+    h3 {
+      a {
+        max-width: 140px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: $text-color;
+        text-decoration: none;
+        line-height: 22px;
+        &:hover {
+          color: $page-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__price {
+    margin-top: 11px;
+    font-size: 16px;
+  }
+
+  &__old-price {
+    margin-right: 10px;
+    text-decoration: line-through;
+    color: $text-through;
+    font-size: 16px;
+  }
+
+  &__new-price {
+    @include RobotoSlabBold();
+  }
+
+  &__stars {
+    margin-top: 12px;
+  }
+
+  &__delete {
+    margin-top: -3px;
+    background: url("/assets/images/header/basket/basket.png");
+    cursor: pointer;
+    width: 14px;
+    height: 17px;
+    @include transitionBtn();
+    &:hover {
+      background: url("/assets/images/header/basket/active.png");
+      width: 14px;
+      height: 17px;
+      @include transitionBtn();
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .basket {
+    &__image {
+      margin-left: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .basket {
+    &__outside {
+      display: none;
+    }
+    &__image {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="catalog-products__item">
+  <div class="catalog-products__image" fxLayoutAlign = "center">
+    <div class="catalog-products__add" fxFlexAlign = "center" routerLink = "/item/3">
+      <img src="{{product.image}}" alt="">
+    </div>
+    <div class="catalog-products__mini-blocks">
+      <div class="catalog-products__basket" fxLayout = "row">
+        <div class="catalog-products__icons-basket"></div>
+        <div class="catalog-products__add-cart"> Add to card</div>
+      </div>
+      <div class="catalog-products__like" fxLayout = "row">
+        <div class="catalog-products__icons-like"></div>
+        <div class="catalog-products__to-wish">To wish</div>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-products__title-product" routerLink = "/item/3">
+    <h3>{{ product.title }}</h3>
+  </div>
+  <div class="catalog-products__price">
+    <p fxLayoutGap = "15px">
+      <span class="catalog-products__old-price">
+        {{ product.old_price | currency}}
+      </span>
+      <span class="catalog-products__new-price">
+        {{ product.new_price | currency}}
+      </span>
+    </p>
+  </div>
+  <div class="catalog-products__stars" fxLayout = "row" fxLayoutAlign = "center">
+    <div class="catalog-products__output-star rating-mini">
+      <ng-container *ngFor="let star of stars">
+        <span class="active" *ngIf="product.rating >= star"></span>
+      </ng-container>
+      <ng-container *ngFor="let star of stars">
+        <span *ngIf="star <= maxStars - product.rating"></span>
+      </ng-container>
+    </div>
+  </div>
+</div>

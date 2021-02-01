@@ -1,0 +1,40 @@
+<div class="facilities">
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <div class="facilities__search" fxFlexAlign="center" fxHide.lt-sm>
+      <input type="text" placeholder="Search for products ..." />
+    </div>
+    <div fxLayoutAlign="row" class="facilities__search-wrapper">
+      <div
+        class="facilities__select"
+        fxLayoutAlign="row"
+        fxFlexAlign="center"
+        fxHide.lt-sm
+        [matMenuTriggerFor]="categories"
+        #openArrow="matMenuTrigger"
+      >
+        <mat-menu
+          #categories="matMenu"
+          backdropClass="facilities__select"
+          class="mat-elevation-z0"
+          xPosition="before"
+        >
+          <button
+            class="facilities__button"
+            mat-menu-item
+            *ngFor="let categories of allCategories"
+            (click)="selectCategories(categories.name)"
+          >
+            <span>{{ categories.name }}</span>
+          </button>
+        </mat-menu>
+
+        <div class="facilities__categories">{{ defaultCategory }}</div>
+        <div
+          class="facilities__arrow"
+          [class.facilities__arrow-up]="openArrow.menuOpen"
+        ></div>
+      </div>
+      <div class="facilities__search-image"></div>
+    </div>
+  </div>
+</div>

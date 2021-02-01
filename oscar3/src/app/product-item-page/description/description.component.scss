@@ -1,0 +1,8 @@
+@import "src/assets/scss/params.scss";
+
+.discription{
+  &__about-product{
+    @include RobotoRegular();
+    line-height: 28px;
+  }
+}

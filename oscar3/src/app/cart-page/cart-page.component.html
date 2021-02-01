@@ -1,0 +1,363 @@
+<div class="cart">
+  <div class="container">
+    <div class="cart__path">
+      <ul fxLayout="row">
+        <li>
+          <a routerLink="/">Home</a>
+        </li>
+        <li routerLinkActive="cart__active">
+          <a [routerLink]="['/', 'cart']">Cart</a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="cart__content"
+      fxLayout="row"
+      fxLayout.lt-lg="column"
+      fxLayoutGap="80px"
+      fxLayoutGap.lt-lg="40px"
+    >
+      <div class="cart__block">
+        <div
+          class="cart__sub-title cart__sub-title_inside"
+          fxLayoutAlign="start"
+        >
+          <h2>My Cart</h2>
+        </div>
+        <div class="cart__headdings" fxLayout="row" fxHide.lt-md>
+          <h4 fxFlex="440px">Product details</h4>
+          <h4 fxFlex="170px">Quantity</h4>
+          <h4 fxFlex="230px">Price</h4>
+        </div>
+        <div class="cart__wrapper" fxLayoutAlign.lt-md="center">
+          <div
+            class="cart__item"
+            fxLayout="row"
+            fxLayout.lt-md="column"
+            fxLayoutGap.lt-md="20px"
+          >
+            <div
+              class="cart__descript"
+              fxLayout="row"
+              fxFlex="440px"
+              fxFlex.lt-md="0 0 auto"
+              fxLayoutGap="20px"
+            >
+              <div class="cart__image" routerLink = "/item/3">
+                <img src="/assets/images/catalog-page/product5.svg" alt="" />
+              </div>
+              <div
+                class="cart__about"
+                fxLayout="column"
+                fxLayoutAlign="space-between"
+              >
+                <div class="cart__title" routerLink = "/item/3">
+                  First Aid Beauty Hello FAB Bendy Avocado Concealer 4.8g
+                </div>
+                <div class="cart__stock">In stock (15 available)</div>
+                <div class="cart__rating rating-mini" fxLayoutAlign="start end">
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row">
+              <div class="cart__quantity" fxLayoutAlign="start" fxFlex="170px" fxFlex.lt-sm = "0 0 auto">
+                <div class="cart__counter" fxFlexAlign="center">
+                  <div fxLayout="row" fxLayoutGap="25px">
+                    <div class="cart__action" (click)="onDecr()">&minus;</div>
+                    <div class="cart__result" fxLayoutAlign="center">
+                      <span>{{ total }}</span>
+                    </div>
+                    <div class="cart__action" (click)="onIncr()">&#x2b;</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="cart__price"
+                fxLayout="row"
+                fxFlex="230px"
+                fxFlex.lt-sm = "0 0 auto"
+                fxLayout.lt-sm = "column"
+                fxLayoutGap="30px"
+                fxLayoutGap.lt-sm = "10px"
+              >
+                <div class="cart__old-price" fxFlexAlign="center">$330</div>
+                <div class="cart__new-price" fxFlexAlign="center">$299</div>
+              </div>
+              <div fxFlex.lt-sm = "1 1 auto" fxLayoutAlign.lt-sm = "end end" fxFlexAlign="center">
+                <div class="cart__basket"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart__wrapper" fxLayoutAlign.lt-md="center">
+          <div
+            class="cart__item cart__out"
+            fxLayout="row"
+            fxLayout.lt-md="column"
+            fxLayoutGap.lt-md="20px"
+          >
+            <div
+              class="cart__descript"
+              fxLayout="row"
+              fxFlex="440px"
+              fxFlex.lt-md="0 0 auto"
+              fxLayoutGap="20px"
+            >
+              <div class="cart__image" routerLink = "/item/3">
+                <img src="/assets/images/catalog-page/product1.svg" alt="" />
+              </div>
+              <div
+                class="cart__about"
+                fxLayout="column"
+                fxLayoutAlign="space-between"
+              >
+                <div class="cart__title" routerLink = "/item/3">
+                  Federico Mahora Pure Royal 800 Chanel
+                </div>
+                <div class="cart__stock">Out of stock</div>
+                <div class="cart__rating rating-mini" fxLayoutAlign="start end">
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row">
+              <div class="cart__quantity" fxLayoutAlign="start" fxFlex="170px" fxFlex.lt-sm = "0 0 auto">
+                <div class="cart__counter" fxFlexAlign="center">
+                  <div fxLayout="row" fxLayoutGap="25px">
+                    <div class="cart__action" (click)="onDecr()">&minus;</div>
+                    <div class="cart__result" fxLayoutAlign="center">
+                      <span>{{ total }}</span>
+                    </div>
+                    <div class="cart__action" (click)="onIncr()">&#x2b;</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="cart__price"
+                fxLayout="row"
+                fxFlex="230px"
+                fxFlex.lt-sm = "0 0 auto"
+                fxLayout.lt-sm = "column"
+                fxLayoutGap="30px"
+                fxLayoutGap.lt-sm = "10px"
+              >
+                <div class="cart__old-price" fxFlexAlign="center">$550</div>
+                <div class="cart__new-price" fxFlexAlign="center">$499</div>
+              </div>
+              <div fxFlex.lt-sm = "1 1 auto" fxLayoutAlign.lt-sm = "end end" fxFlexAlign="center">
+                <div class="cart__basket"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart__wrapper" fxLayoutAlign.lt-md="center">
+          <div
+            class="cart__item"
+            fxLayout="row"
+            fxLayout.lt-md="column"
+            fxLayoutGap.lt-md="20px"
+          >
+            <div
+              class="cart__descript"
+              fxLayout="row"
+              fxFlex="440px"
+              fxFlex.lt-md="0 0 auto"
+              fxLayoutGap="20px"
+            >
+              <div class="cart__image" routerLink = "/item/3">
+                <img src="/assets/images/catalog-page/product6.svg" alt="" />
+              </div>
+              <div
+                class="cart__about"
+                fxLayout="column"
+                fxLayoutAlign="space-between"
+              >
+                <div class="cart__title" routerLink = "/item/3">
+                  Collistar Silk Effect Compact Powder
+                </div>
+                <div class="cart__stock">In stock (179 available)</div>
+                <div class="cart__rating rating-mini" fxLayoutAlign="start end">
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row">
+              <div class="cart__quantity" fxLayoutAlign="start" fxFlex="170px" fxFlex.lt-sm = "0 0 auto">
+                <div class="cart__counter" fxFlexAlign="center">
+                  <div fxLayout="row" fxLayoutGap="25px">
+                    <div class="cart__action" (click)="onDecr()">&minus;</div>
+                    <div class="cart__result" fxLayoutAlign="center">
+                      <span>{{ total }}</span>
+                    </div>
+                    <div class="cart__action" (click)="onIncr()">&#x2b;</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="cart__price"
+                fxLayout="row"
+                fxFlex="230px"
+                fxFlex.lt-sm = "0 0 auto"
+                fxLayout.lt-sm = "column"
+                fxLayoutGap="30px"
+                fxLayoutGap.lt-sm = "10px"
+              >
+                <div class="cart__old-price" fxFlexAlign="center">$130</div>
+                <div class="cart__new-price" fxFlexAlign="center">$100</div>
+              </div>
+              <div fxFlex.lt-sm = "1 1 auto" fxLayoutAlign.lt-sm = "end end" fxFlexAlign="center">
+                <div class="cart__basket"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart__wrapper" fxLayoutAlign.lt-md="center">
+          <div
+            class="cart__item"
+            fxLayout="row"
+            fxLayout.lt-md="column"
+            fxLayoutGap = "0px"
+            fxLayoutGap.lt-md="20px"
+          >
+            <div
+              class="cart__descript"
+              fxLayout="row"
+              fxFlex="440px"
+              fxFlex.lt-md="0 0 auto"
+              fxLayoutGap="20px"
+            >
+              <div class="cart__image" routerLink = "/item/3">
+                <img src="/assets/images/catalog-page/product7.svg" alt="" />
+              </div>
+              <div
+                class="cart__about"
+                fxLayout="column"
+                fxLayoutAlign="space-between"
+              >
+                <div class="cart__title" routerLink = "/item/3">
+                  Sleek MakeUP iDivine Eyeshadow Palette 3am 9g
+                </div>
+                <div class="cart__stock">In stock (15 available)</div>
+                <div class="cart__rating rating-mini" fxLayoutAlign="start end">
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span class="active"></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row">
+              <div class="cart__quantity" fxLayoutAlign="start" fxFlex="170px" fxFlex.lt-sm = "0 0 auto">
+                <div class="cart__counter" fxFlexAlign="center">
+                  <div fxLayout="row" fxLayoutGap="25px">
+                    <div class="cart__action" (click)="onDecr()">&minus;</div>
+                    <div class="cart__result" fxLayoutAlign="center">
+                      <span>{{ total }}</span>
+                    </div>
+                    <div class="cart__action" (click)="onIncr()">&#x2b;</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="cart__price"
+                fxLayout="row"
+                fxFlex="230px"
+                fxFlex.lt-sm = "0 0 auto"
+                fxLayout.lt-sm = "column"
+                fxLayoutGap="30px"
+                fxLayoutGap.lt-sm = "10px"
+              >
+                <div class="cart__old-price" fxFlexAlign="center">$2330</div>
+                <div class="cart__new-price" fxFlexAlign="center">$2200</div>
+              </div>
+              <div fxFlex.lt-sm = "1 1 auto" fxLayoutAlign.lt-sm = "end end" fxFlexAlign="center">
+                <div class="cart__basket"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart__promo" fxFlex="auto">
+        <div class="cart__sub-title cart__sub-title_code">
+          <h2>Promo code</h2>
+        </div>
+        <div class="cart__voucher">
+          <mat-form-field fxFlex="100%">
+            <mat-label class="reviews__label" fxLayoutAlign="space-between"
+              ><span>Enter valid code voucher</span>
+              <img src="/assets/images/cart/reply.png" alt="" />
+            </mat-label>
+            <input class="reviews__area" matInput />
+          </mat-form-field>
+        </div>
+        <div class="cart__sub-title cart__sub-title_code">
+          <h2>Total Price</h2>
+        </div>
+        <div
+          fxLayout="column"
+          fxLayout.lt-lg="row"
+          fxLayout.lt-sm="column"
+          fxLayoutGap = "30px"
+          fxLayoutGap.lt-lg="90px"
+          fxLayoutGap.lt-md="35px"
+        >
+          <div class="cart__total" fxFlex.lt-lg="50%">
+            <div class="cart__all-money" fxLayoutAlign="space-between">
+              <div class="cart__total-text">Basket total</div>
+              <div class="cart__total-price">$754.68</div>
+            </div>
+            <div class="cart__all-money" fxLayoutAlign="space-between">
+              <div class="cart__total-text">Basket total</div>
+              <div class="cart__total-price cart__total-price_discound">
+                -$204.90
+              </div>
+            </div>
+            <div class="cart__all-money" fxLayoutAlign="space-between">
+              <div class="cart__total-text">With shipping</div>
+              <div class="cart__total-price">$549.78</div>
+            </div>
+          </div>
+          <div
+            class="cart__btn"
+            fxLayout="column"
+            fxLayoutGap="20px"
+            fxFlex.lt-lg="50%"
+            fxLayoutAlign ="stretch"
+            fxLayoutAlign.lt-lg="space-between"
+          >
+            <button class="cart__proceed" fxFlex="100%" fxFlex.lt-lg="0 0 auto">
+              Proceed to checkout
+            </button>
+            <button
+              class="cart__continue"
+              fxFlex="100%"
+              fxFlex.lt-lg="0 0 auto"
+              [routerLink]="['/', 'catalog']"
+            >
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

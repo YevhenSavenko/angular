@@ -1,0 +1,90 @@
+@import "src/assets/scss/params.scss";
+
+.details {
+
+  // &__about {}
+
+  // &__key {}
+
+  &__title {
+    h2{
+      margin-bottom: 0;
+      @include RobotoSlabRegular();
+      font-size: 20px;
+    }
+  }
+
+  &__specifications {
+    padding: 20px 0;
+    border-bottom: 1px solid $header-border;
+    &:first-child{
+      padding-top: 0px;
+    }
+    &:last-child{
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__describe {
+    @include RobotoRegular();
+  }
+
+  &__value {
+    text-align: right;
+    @include RobotoRegular();
+  }
+
+  // &__contratibility {}
+
+  // &__ingredients {}
+
+  &__ingredients-title {
+    margin: 36px 0 25px 0;
+    h3{
+      @include RobotoSlabRegular();
+      font-size:  26px;
+    }
+  }
+
+  &__list {
+    @include RobotoRegular();
+    line-height: 28px;
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  &__organic {
+    @include RobotoRegular();
+    color: $like-border;
+    p{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+  @media screen and (max-width: 959px) {
+    .details {
+      height: 407px;
+      padding-right: 36px;
+      box-sizing: border-box;
+      overflow-y: scroll;
+      &::-webkit-scrollbar{
+        width: 1px;
+        background: $header-border;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $like-border;
+      }
+    }
+  }
+
+  @media screen and (max-width: 599px) {
+    .details{
+      &__value {
+        text-align: left;
+        @include RobotoSlabBold();
+      }
+    }
+  }

@@ -1,0 +1,104 @@
+@import "src/assets/scss/params.scss";
+
+.brands {
+  min-width: 320px;
+  padding: 60px 0 60px 0;
+  background: $bg-brands;
+  &__title {
+    h2 {
+      margin-bottom: 0;
+      position: relative;
+      color: $text-color;
+      @include RobotoSlabBold();
+      font-size: 36px;
+      &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 43px;
+        height: 1px;
+        background: $text-color;
+        right: -69px;
+        bottom: 12px;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 43px;
+        height: 1px;
+        background: $text-color;
+        left: -69px;
+        bottom: 12px;
+      }
+    }
+  }
+
+  &__scroll {
+    margin-top: 40px;
+  }
+
+  &__slider {
+    img {
+      padding-right: 26px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__icons {
+    font-size: 25px;
+    color: $text-color;
+  }
+
+  &__arrows {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .brands {
+    &__slider {
+      img {
+        padding-right: 15px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .brands {
+    padding-bottom: 40px;
+    &__slider {
+      img {
+        width: 169px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .brands {
+    &__slider {
+      img {
+        width: 140px;
+        height: 90px;
+      }
+    }
+    &__title {
+      h2 {
+        &:after {
+          display: none;
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

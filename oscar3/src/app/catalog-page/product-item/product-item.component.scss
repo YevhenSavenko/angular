@@ -1,0 +1,141 @@
+@import "src/assets/scss/params.scss";
+
+.catalog-products {
+  &__catalog {
+    margin-top: 41px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    &:hover {
+      outline: 1px solid $header-border;
+      .catalog-products__mini-blocks {
+        display: block;
+      }
+    }
+  }
+
+  &__mini-blocks {
+    display: none;
+  }
+
+  &__image {
+    position: relative;
+    min-height: 250px;
+    cursor: pointer;
+  }
+
+  &__add {
+    position: relative;
+  }
+
+  &__basket {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    &:hover {
+      background: $page-color;
+      .catalog-products__icons-basket {
+        background: url("/assets/images/products/icons/new_basket.png")
+          no-repeat center center;
+      }
+      .catalog-products__add-cart {
+        display: block;
+      }
+    }
+  }
+
+  &__like {
+    position: absolute;
+    cursor: pointer;
+    top: 76px;
+    left: 20px;
+    &:hover {
+      background: $like-border;
+      .catalog-products__icons-like {
+        background: url("/assets/images/products/icons/new_like.png") no-repeat
+          center center;
+      }
+      .catalog-products__to-wish {
+        display: block;
+      }
+    }
+  }
+
+  &__icons-basket {
+    background: url("/assets/images/products/icons/basket.png") no-repeat center
+      center;
+    border: 1px solid $page-color;
+    padding: 12px 13px;
+    width: 20px;
+    height: 22px;
+  }
+
+  &__add-cart {
+    display: none;
+    background: $page-color;
+    color: $bg;
+    font-size: 18px;
+    padding: 13px 20px 0 0;
+  }
+
+  &__icons-like {
+    background: url("/assets/images/products/icons/like.png") no-repeat center
+      center;
+    border: 1px solid $like-border;
+    padding: 12px 13px;
+    width: 20px;
+    height: 22px;
+  }
+
+  &__to-wish {
+    display: none;
+    background: $like-border;
+    color: $bg;
+    font-size: 18px;
+    padding: 13px 20px 0 0;
+  }
+
+  &__title-product {
+    margin: 19px 0 17px 0;
+    padding: 0 53px;
+    h3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-align: center;
+      @include RobotoSlabRegular();
+      white-space: wrap;
+      font-size: 18px;
+      line-height: 25px;
+      &:hover {
+        color: $page-color;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 15px;
+    p {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  &__old-price {
+    color: $text-through;
+    text-decoration: line-through;
+  }
+
+  &__new-price {
+    @include RobotoSlabBold();
+  }
+
+  &__stars {
+    margin-bottom: 21px;
+  }
+}

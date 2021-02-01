@@ -1,0 +1,235 @@
+@import "src/assets/scss/params.scss";
+
+.header {
+  padding-top: 14px;
+  color: $text-color;
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 60px;
+    width: 100%;
+    height: 1px;
+    background: $header-border;
+  }
+  a {
+    text-decoration: none;
+    color: $page-color;
+    &:hover {
+      text-decoration: underline;
+      color: $page-hover;
+    }
+  }
+
+  &__logo{
+    a{
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__select {
+    padding-left: 20px;
+  }
+
+  &__break {
+    height: 0;
+  }
+
+  &__wrapper {
+    padding: 28px 0;
+  }
+
+  &__search {
+    margin: 15px 0;
+  }
+
+  &__menu-dark{
+    span{
+      background: #000;
+    }
+  }
+
+  &__burger-menu + * .mat-menu-panel {
+    margin-top: 32px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__burger-menu + * .mat-menu-content:not(:empty) {
+   padding: 0 20px;
+  }
+
+  &__burger-menu + * button.mat-menu-item {
+    @include RobotoSlabRegular();
+    font-size: 16px;
+    padding: 13px 0;
+    line-height: 0;
+    padding: 0;
+    min-width: 150px;
+    border-bottom: 1px solid $header-border;
+    &:hover{
+      background: none;
+      color: $page-color;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+}
+
+.phone {
+  padding: 6px 30px 6px 0;
+  border-right: 1px solid $header-border;
+  margin-bottom: 15px;
+  &__images {
+    background-image: url("/assets/images/header/phone.svg");
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.be-found {
+  margin-left: 20px;
+  padding: 6px 30px 6px 0;
+  &__picture {
+    background: url("/assets/images/header/navigate.svg") no-repeat center
+      center;
+    height: 12px;
+    width: 10px;
+    display: inline-block;
+    margin-right: 9px;
+  }
+}
+
+.register {
+  padding: 6px 30px 6px 0;
+  border-right: 1px solid $header-border;
+  &__image {
+    background: url("/assets/images/header/header/user.svg") no-repeat;
+    width: 12px;
+    height: 12px;
+    background-size: 100%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.wish {
+  padding: 6px 30px 6px 20px;
+  border-right: 1px solid $header-border;
+  &__image {
+    background: url("/assets/images/header/header/like.svg") no-repeat;
+    width: 13px;
+    height: 12px;
+    background-size: 100%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.menu {
+  margin: 0 40px 0 43px;
+  cursor: pointer;
+  &__block {
+    display: block;
+    width: 38px;
+    height: 4px;
+    background-color: $page-color;
+    @include transitionBtn();
+  }
+  &:hover{
+    .menu__block{
+      @include transitionBtn();
+      background-color: #383838;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    position: relative;
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: 72px;
+      width: 100%;
+      height: 1px;
+      background: $header-border;
+    }
+    &__search {
+      margin: 7px 0;
+    }
+    &__burger-menu + * .mat-menu-panel {
+      margin-top: 30px;
+    }
+  }
+  .register {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .phone {
+    padding-right: 20px;
+  }
+  .wish {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .register {
+    a,
+    span {
+      display: none;
+    }
+    &__image {
+      margin-top: 3px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header {
+    &:after {
+      bottom: 62px;
+    }
+  }
+
+  .menu {
+    margin-right: 0;
+  }
+
+  .wish {
+    padding: 0;
+    border-right: none;
+    &__image {
+      margin: 5px 0px 0px 20px;
+      border-right: 1px solid $header-border;
+      padding-right: 20px;
+      background-size: 23px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  .register {
+    padding: 0;
+    border-right: none;
+    &__image {
+      border-right: 1px solid $header-border;
+      margin: 2px 0px 0px 20px;
+      padding-right: 20px;
+      background-size: 23px;
+    }
+  }
+}

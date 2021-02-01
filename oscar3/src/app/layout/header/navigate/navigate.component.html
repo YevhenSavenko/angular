@@ -1,0 +1,604 @@
+<div class="navigate">
+  <div class="container">
+    <div class="navigate__row">
+      <div fxLayout="row" fxHide.lt-lg>
+        <div
+          class="navigate__link navigate__link_first"
+          [matMenuTriggerFor]="BrowMenu"
+          #open="matMenuTrigger"
+          [class.navigate__menu-open]="open.menuOpen"
+        >
+          <a class="navigate__item navigate__item_first">Brow Fix & Mascara</a>
+        </div>
+        <mat-menu
+          #BrowMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <div
+          class="navigate__link"
+          [matMenuTriggerFor]="GlitzMenu"
+          #open1="matMenuTrigger"
+          [class.navigate__menu-open]="open1.menuOpen"
+        >
+          <a class="navigate__item">Eyeshadow Glitz</a>
+        </div>
+        <mat-menu
+          #GlitzMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <div
+          class="navigate__link"
+          [matMenuTriggerFor]="PalettesMenu"
+          #open2="matMenuTrigger"
+          [class.navigate__menu-open]="open2.menuOpen"
+        >
+          <a class="navigate__item">Eyeshadow Palettes</a>
+        </div>
+        <mat-menu
+          #PalettesMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <div
+          class="navigate__link"
+          [matMenuTriggerFor]="HighlighterMenu"
+          #open3="matMenuTrigger"
+          [class.navigate__menu-open]="open3.menuOpen"
+        >
+          <a class="navigate__item">Highlighter </a>
+        </div>
+        <mat-menu
+          #HighlighterMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <div
+          class="navigate__link"
+          [matMenuTriggerFor]="GlazeMenu"
+          #open4="matMenuTrigger"
+          [class.navigate__menu-open]="open4.menuOpen"
+        >
+          <a class="navigate__item">Lip Glaze</a>
+        </div>
+        <mat-menu
+          #GlazeMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+          xPosition="before"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <div
+          class="navigate__link"
+          [matMenuTriggerFor]="LashesMenu"
+          #open5="matMenuTrigger"
+          [class.navigate__menu-open]="open5.menuOpen"
+        >
+          <a class="navigate__item">Mink Lashes</a>
+        </div>
+        <mat-menu
+          #LashesMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+          xPosition="before"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <div
+          class="navigate__link"
+          [matMenuTriggerFor]="MerchandiseaMenu"
+          #open6="matMenuTrigger"
+          [class.navigate__menu-open]="open6.menuOpen"
+        >
+          <a class="navigate__item">Merchandisea</a>
+        </div>
+        <mat-menu
+          #MerchandiseaMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+          xPosition="before"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+
+        <div
+          class="navigate__link navigate__link_last"
+          [matMenuTriggerFor]="SubmitMenu"
+          #open7="matMenuTrigger"
+          [class.navigate__menu-open]="open7.menuOpen"
+        >
+          <a class="navigate__item navigate__item_last">Submit</a>
+        </div>
+        <mat-menu
+          #SubmitMenu="matMenu"
+          backdropClass="navigate__select"
+          class="mat-elevation-z0"
+          xPosition="before"
+        >
+          <div class="navigate__menu">
+            <div fxLayout="row" class="navigate__wrapper">
+              <div class="navigate__make-up">
+                <div class="navigate__headding">
+                  <h3>Make up categories</h3>
+                </div>
+                <div fxLayout="row">
+                  <ul class="navigate__links" fxFlex="0 0 142px">
+                    <li><a href="">All Makeup</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Bestsellers</a></li>
+                    <li><a href="">Gifts & Sets</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Face</a></li>
+                    <li><a href="">Lips</a></li>
+                    <li><a href="">Eyes</a></li>
+                  </ul>
+                  <ul
+                    class="navigate__links navigate__links_center-column"
+                    fxFlex="0 0 223px"
+                  >
+                    <li><a href="">Palettes</a></li>
+                    <li><a href="">Highlighters & Luminisers</a></li>
+                    <li><a href="">Contouring</a></li>
+                    <li><a href="">Nails</a></li>
+                    <li><a href="">Brushes</a></li>
+                    <li><a href="">Makeup Bags</a></li>
+                    <li><a href="">Tools & Accessories</a></li>
+                    <li><a href="">Organic & Natural</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigate__brands">
+                <div class="navigate__headding">
+                  <h3>Featured Brands</h3>
+                </div>
+                <ul class="navigate__links">
+                  <li><a href="">Rimmel</a></li>
+                  <li><a href="">Bourjois</a></li>
+                  <li><a href="">NYX Professional Makeup</a></li>
+                  <li><a href="">Elizabeth Arden</a></li>
+                  <li><a href="">Urban Decay</a></li>
+                  <li><a href="">GUERLAIN</a></li>
+                  <li><a href="">Anastasia Beverly Hills</a></li>
+                  <li><a href="">Huda Beauty</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <div fxHide fxShow.lt-lg>
+    <div
+      class="navigate__all-categories"
+      [matMenuTriggerFor]="AllCategoryesMenu"
+    >
+      All categories
+    </div>
+    <mat-menu
+      #AllCategoryesMenu="matMenu"
+      backdropClass="navigate__select"
+      class="mat-elevation-z0"
+      xPosition="after"
+    >
+      <div class="navigate__menu container">
+        <div fxLayout="row" fxLayout.lt-sm="column" class="navigate__wrapper">
+          <div
+            class="navigate__make-up"
+            fxFlex="0 0 50%"
+            fxFlex.lt-md="0 0 60%"
+            fxFlex.lt-sm="0 0 100%"
+          >
+            <div class="navigate__headding">
+              <h3 class="navigate__all-categories-make">Make up categories</h3>
+            </div>
+            <div fxLayout="row">
+              <div
+                fxFlex="0 0 50%"
+                fxFlex.lt-md="0 0 40%"
+                fxFlex.lt-sm="0 0 50%"
+              >
+                <ul class="navigate__links">
+                  <li><a href="">All Makeup</a></li>
+                  <li><a href="">New</a></li>
+                  <li><a href="">Bestsellers</a></li>
+                  <li><a href="">Gifts & Sets</a></li>
+                  <li><a href="">Offers</a></li>
+                  <li><a href="">Face</a></li>
+                  <li><a href="">Lips</a></li>
+                  <li><a href="">Eyes</a></li>
+                </ul>
+              </div>
+              <ul
+                class="navigate__links navigate__links_center-column"
+                fxFlex="0 0 50%"
+                fxFlex.lt.md="0 0 60%"
+                fxFlex.lt-sm="0 0 50%"
+              >
+                <li><a href="">Palettes</a></li>
+                <li><a href="">Highlighters & Luminisers</a></li>
+                <li><a href="">Contouring</a></li>
+                <li><a href="">Nails</a></li>
+                <li><a href="">Brushes</a></li>
+                <li><a href="">Makeup Bags</a></li>
+                <li><a href="">Tools & Accessories</a></li>
+                <li><a href="">Organic & Natural</a></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="navigate__brands"
+            fxFlex="0 0 auto"
+            fxFlex.lt-sm="0 0 100%"
+          >
+            <div class="navigate__headding">
+              <h3>Featured Brands</h3>
+            </div>
+            <ul class="navigate__links">
+              <li><a href="">Rimmel</a></li>
+              <li><a href="">Bourjois</a></li>
+              <li><a href="">NYX Professional Makeup</a></li>
+              <li><a href="">Elizabeth Arden</a></li>
+              <li><a href="">Urban Decay</a></li>
+              <li><a href="">GUERLAIN</a></li>
+              <li><a href="">Anastasia Beverly Hills</a></li>
+              <li><a href="">Huda Beauty</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </mat-menu>
+  </div>
+</div>

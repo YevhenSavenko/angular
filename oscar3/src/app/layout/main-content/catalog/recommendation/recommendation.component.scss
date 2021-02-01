@@ -1,0 +1,85 @@
+@import "src/assets/scss/params.scss";
+
+.recommendation{
+  &__ad{
+    margin-top: 40px;
+  }
+
+  &__summer{
+    outline: 2px solid $bg;
+    outline-offset: -20px;
+    background: url("/assets/images/products/discount/sale2.png");
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+  }
+
+  &__summer,&__style{
+    padding-left: 61px;
+    h2{
+      font-size: 28px;
+      @include RobotoSlabBold();
+    }
+    p{
+      font-size: 24px;
+      margin: 15px 0 20px 0;
+      span{
+        color: $page-color;
+        @include RobotoSlabBold();
+      }
+    }
+    button{
+      @include btn();
+    }
+  }
+
+  &__shop-now{
+    text-align: center;
+  }
+
+  &__style{
+    outline: 2px solid $bg;
+    outline-offset: -20px;
+    background: url("/assets/images/products/discount/your-style.png");
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .recommendation{
+    &__summer,&__style{
+      background-position: center;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .recommendation{
+    &__summer,&__style{
+      background-position: 200px right;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .recommendation{
+    &__summer,&__style{
+      padding-left: 0px;
+      h2{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+        font-size: 24px;
+        margin: 15px 0 20px 0;
+        span{
+          color: $page-color;
+          @include RobotoSlabBold();
+        }
+      }
+    }
+  }
+}
+

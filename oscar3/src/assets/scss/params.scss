@@ -1,0 +1,64 @@
+@import "./fonts.scss";
+
+$page-color: #bd54ad;
+$text-color: #383838;
+$text-through: #cdcdcd;
+$bg: #ffffff;
+$bg-brands: #f8f8f8;
+$stars: #ffcf69;
+$before-el: #959595;
+$page-hover: #b34da3;
+$header-border: #efefef;
+$navigate-border: #cd78c0;
+$like-border: #8a8a8a;
+
+
+@mixin btn {
+  background: none;
+  padding: 20px 37px;
+  color: $page-color;
+  border: 1px solid $page-color;
+  font-size: 20px;
+  @include transitionBtn();
+  &:hover{
+    color: $bg;
+    background: $page-color;
+    @include transitionBtn();
+  }
+}
+
+@mixin RobotoRegular {
+  font-family: "Roboto Regular";
+}
+
+@mixin RobotoBold {
+  font-family: "Roboto Bold";
+}
+
+@mixin RobotoSlabLight {
+  font-family: "Roboto Slab Light";
+}
+
+@mixin RobotoSlabRegular {
+  font-family: "Roboto Slab Regular";
+}
+
+@mixin RobotoSlabBold {
+  font-family: "Roboto Slab Bold";
+}
+
+@mixin transition {
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+}
+
+@mixin transitionBtn {
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}

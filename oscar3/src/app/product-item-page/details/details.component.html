@@ -1,0 +1,79 @@
+<div class="details">
+  <div 
+    class="details__about" 
+    fxLayout="row" 
+    fxLayout.lt-md = "column" 
+    fxLayoutGap="82px" 
+    fxLayoutGap.lt-md="40px"
+    >
+    <div class="details__key" fxFlex="50%">
+      <div class="details__title">
+        <h2>Key Specs</h2>
+      </div>
+      <div
+        class="details__specifications"
+        fxLayout="row"
+        fxLayout.lt-sm="column"
+        fxLayoutAlign="space-between"
+        *ngFor="let item of specifications"
+        fxLayoutGap = "40px"
+        fxLayoutGap.lt-sm = "15px"
+      >
+        <div class="details__describe">
+          {{ item.key }}
+        </div>
+        <div class="details__value">
+          {{ item.value }}
+        </div>
+      </div>
+    </div>
+    <div class="details__contratibility" fxFlex="50%">
+      <div class="details__title">
+        <h2>Compatibility</h2>
+      </div>
+      <div
+        class="details__specifications"
+        fxLayout="row"
+        fxLayout.lt-sm="column"
+        fxLayoutAlign="space-between"
+        *ngFor="let item of specifications"
+        fxLayoutGap = "40px"
+        fxLayoutGap.lt-sm = "15px"
+      >
+        <div class="details__describe">
+          {{ item.key }}
+        </div>
+        <div class="details__value">
+          {{ item.value }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="details__ingredients">
+    <div class="details__ingredients-title">
+      <h3>Ingredients</h3>
+    </div>
+    <div fxLayout = "column" fxLayoutGap = "45px">
+      <div class="details__list">
+        <p>
+          Mica, Squalane, Triticum Vulgare Starch/Triticum Vulgare* (Wheat)
+          Starch*, Zea Mays Starch/Zea Mays (Corn) Starch*, Talc, Caprylic/Capric
+          Triglyceride, Isoamyl Laurate, Zinc Stearate, Glyceryl Caprylate,
+          Magnesium Stearate, Lauroyl Lysine, Sorbic Acid, Octyldodecanol, Silica.
+          (+/-) May Contain: CI 77491, CI 77492, CI 77499 (Iron Oxides), CI 77891
+          (Titanium Dioxide), CI 77007 (Ultramarines), CI 77510 (Ferric
+          Ferrocyanide).
+        </p>
+      </div>
+      <div class="details__organic">
+        <p>*Ingredient From Organic Farming</p>
+        <p>99.64% of total ingredients are from natural origin.</p>
+        <p>
+          11.12% of the total ingredients are from organic farming. Natural and
+          organic cosmetic certified by Ecocert Greenlife according to ECOCERT.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

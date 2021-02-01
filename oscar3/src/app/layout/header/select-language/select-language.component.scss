@@ -1,0 +1,98 @@
+@import "src/assets/scss/params.scss";
+
+.select {
+  padding: 6px 0;
+  &__image {
+    background: url("/assets/images/header/flag.svg");
+    width: 10px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  &__arow {
+    background: url("/assets/images/header/arrow-down.svg") no-repeat 0 7px;
+    width: 10px;
+    height: 16px;
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  &__arrow-up {
+    background: url("/assets/images/header/arrow-up.svg") no-repeat center 7px;
+    width: 10px;
+    height: 16px;
+  }
+
+  &__language {
+    background: none;
+    border: none;
+    padding: 0;
+    &:hover {
+      color: $page-color;
+      text-decoration: underline;
+    }
+    &_name {
+      display: block;
+      text-align: center;
+      padding: 0;
+      color: $page-color;
+      font-size: 16px;
+      @include transitionBtn();
+      &:hover {
+        background: $page-color;
+        color: $bg;
+        @include transitionBtn();
+      }
+    }
+  }
+  span {
+    cursor: pointer;
+    color: $page-color;
+  }
+
+  &__menu + * .mat-menu-panel {
+    min-width: 130px;
+    margin-top: 19px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__menu + * .mat-menu-content:not(:empty) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  &__menu + * button.mat-menu-item {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 824px) {
+  .be-found {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .wish {
+    span {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .select {
+    &__menu + * .mat-menu-panel {
+      min-width: 110px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .phone {
+    padding-right: 20px;
+  }
+}

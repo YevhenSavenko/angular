@@ -1,0 +1,408 @@
+@import "src/assets/scss/params.scss";
+
+.goods{
+margin-top: 40px;
+
+  &__path {
+    a {
+      @include RobotoSlabRegular();
+      margin-right: 25px;
+      color: $text-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: disc;
+      li {
+        padding: 0 14px 0 8px;
+        &:first-child {
+          padding-left: 0;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  &__active-links {
+    a {
+      color: $text-through;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: wrap;
+    }
+  }
+
+  &__about{
+    margin: 40px 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $header-border;
+  }
+
+  &__like{
+    background: url("/assets/images/header/like.svg");
+    width: 13px;
+    height: 12px;
+  }
+
+  // &_select-color {}
+
+  // &__images {}
+
+  // &__select {}
+
+  &__select-title {
+    h2{
+      position: relative;
+      @include RobotoSlabBold();
+      font-size: 28px;
+      line-height: 36px;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 43px;
+        height: 1px;
+        background: $like-border;
+        bottom: -14px;
+      }
+    }
+  }
+
+  &__find {
+    margin-top: 23px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $header-border;
+  }
+
+  // &__id {}
+
+  // &__reviews {}
+
+  &__rating {
+    margin-top: 5px;
+   span{
+     font-size: 22px;
+   }
+  }
+
+  // &__appraisal {}
+
+  &__wish {
+    cursor: pointer;
+    &:hover{
+      color: $page-hover;
+      text-decoration: underline;
+      .goods__like{
+        background: url("/assets/images/item/icons/like-active.png") no-repeat center;
+      }
+    }
+  }
+
+  // &__add {}
+
+  &__take {
+    margin-top: 39px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $header-border;
+  }
+
+  // &__select-size {}
+
+  &__label {
+    color: $like-border;
+    @include RobotoSlabLight();
+    margin-bottom: 10px;
+  }
+
+  &__menu {
+    font-size: 18px;
+  }
+
+  &__arrow {
+    background: url("/assets/images/item/icons/arrow-large.svg") no-repeat center;
+    width: 14px;
+    height: 10px;
+    @include transitionBtn();
+  }
+
+  &__params{
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $like-border;
+  }
+
+  &__by {
+    margin-top: 24px;
+  }
+
+  // &__price {}
+
+  &__old-price {
+    font-size: 34px;
+    text-decoration: line-through;
+    color: $text-through;
+  }
+
+  &__new-price {
+    @include RobotoSlabBold();
+    font-size: 34px;
+  }
+
+  &__less {
+    font-size: 18px;
+  }
+
+  // &__buttons {}
+
+  &__counter {
+    padding: 23px 13px;
+    border: 1px solid $like-border;
+  }
+
+  &__action{
+    cursor: pointer;
+    font-size: 22px;
+    color: $like-border;
+  }
+
+  &__result{
+    width: 13px;
+    position: relative;
+    font-size: 18px;
+    span{
+      position: absolute;
+    }
+  }
+
+  &__cart-add {
+    cursor: pointer;
+    color: $page-color;
+    font-size: 20px;
+    padding: 22px 31px;
+    border: 1px solid $page-color;
+    @include transitionBtn();
+    &:hover{
+      color: $bg;
+      background: $page-hover;
+      @include transitionBtn();
+    }
+  }
+
+  &__closed{
+    @include transitionBtn();
+    transform: rotate(180deg);
+  }
+
+
+  &__menu-size + * .mat-menu-panel {
+    max-width: none;
+    min-width: none;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: -2px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+    min-height: 0;
+  }
+
+  &__menu-size + * .mat-menu-content:not(:empty) {
+   padding: 0;
+  }
+
+  &__menu-size + * button.mat-menu-item {
+    width: 100%;
+    @include RobotoSlabRegular();
+    border-bottom: 1px solid $header-border;
+    font-size: 16px;
+    padding: 0;
+    line-height: 0;
+    &:hover{
+      background: none;
+      color: $page-color;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  &__links-product + * .mat-menu-panel{
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-width: none;
+    min-width: none;
+    margin-top: -2px;
+    border: 1px solid $header-border;
+    border-radius: 0;
+    min-height: 0;
+  }
+
+  &__links-product + * .mat-menu-content:not(:empty) {
+    padding: 0;
+  }
+
+  &__links-product + * button.mat-menu-item {
+    @include RobotoSlabRegular();
+    border-bottom: 1px solid $header-border;
+    font-size: 20px;
+    line-height: 0;
+    padding: 10px 0;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  &__info{
+    margin-bottom: 35px;
+    a{
+      cursor: pointer;
+      position: relative;
+      font-size: 24px;
+      text-decoration: none;
+      color: $text-color;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        &:after{
+          display: block;
+          position: absolute;
+          content: '';
+          bottom: -5px;
+          width: 100%;
+          height: 1px;
+          background: $text-color;
+        }
+      }
+    }
+  }
+
+  &__info_active{
+    a{
+      color: $page-color;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: -5px;
+        width: 100%;
+        height: 1px;
+        background: $page-color;
+      }
+      &:hover{
+        &:after{
+          background: $page-color;
+        }
+      }
+    }
+  }
+
+  &__info-menu{
+    padding-bottom: 11px;
+    font-size: 20px;
+    color: $page-color;
+    border-bottom: 1px solid $page-color;
+  }
+
+  &__arrow-select{
+    background: url("/assets/images/item/icons/arrow-active.png") no-repeat center;
+    width: 15px;
+    height: 9px;
+    @include transitionBtn();
+  }
+
+  &__similar{
+    margin: 75px 0 80px 0;
+  }
+  
+  &__similar-title{
+    margin-bottom: 33px;
+    h2{
+      position: relative;
+      font-size: 36px;
+      @include RobotoSlabBold();
+      margin-bottom: 0;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 43px;
+        height: 1px;
+        background: $text-color;
+        top: calc(50% - 0.5px);
+        right: -83px;
+      }
+    }
+  }
+  
+}
+
+
+@media screen and (max-width: 1279px) {
+  .goods{
+    &__find{
+      font-size: 20px;
+      margin-top: 36px;
+      border-bottom: none;
+    }
+    &__colage{
+      padding-bottom: 60px;
+      border-bottom: 1px solid $header-border;
+    }
+    &__menu-size + * .mat-menu-panel {
+      width: 100%;
+    }
+    &__select-title{
+      h2{
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .goods{
+    &__find{
+      font-size: 16px;
+      margin-top: 24px;
+    }
+    &__select-title{
+      h2{
+        font-size: 30px;
+      }
+    }
+    &__colage{
+      border-bottom: none;
+    }
+    &__reviews{
+      padding-bottom: 29px;
+      border-bottom: 1px solid $header-border;
+    }
+    &__select-title {
+      h2{
+        &:after{
+          display: none;
+        }
+      }
+    }
+    &__select-color{
+      margin-top: 29px;
+    }
+    &__similar-title{
+      h2{
+        &:after{
+          display: none;
+        }
+      }
+    } 
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .goods{
+    &__cart-add {
+      padding: 23px 13px;
+    }
+  }
+}

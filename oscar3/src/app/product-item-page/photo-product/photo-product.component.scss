@@ -1,0 +1,84 @@
+@import "src/assets/scss/params.scss";
+
+.media-product {
+
+  // &__video {}
+
+  &__photo {
+    img{
+      cursor: pointer;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  .media-product {
+    &__video {
+      iframe{
+        width: 700px;
+      }
+    }
+    &__wrapper{
+      margin-top: 20px;
+    }
+    &__slider{
+      position: relative;
+      img{
+        width: 32.3%;
+        padding-right: 20px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+    &__icons{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: $bg;
+      &_left{
+        left: 16px;
+      }
+      &_right{
+        right: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .media-product {
+    &__video {
+      iframe{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .media-product {
+    &__video {
+      iframe{
+        height: 350px;
+      }
+    }
+    &__slider{
+      img{
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .media-product {
+    &__video {
+      iframe{
+        height: 220px;
+      }
+    }
+  }
+}

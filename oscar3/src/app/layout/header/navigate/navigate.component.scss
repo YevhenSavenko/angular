@@ -1,0 +1,193 @@
+@import "src/assets/scss/params.scss";
+
+.navigate {
+  background: $page-color;
+  min-width: 320px;
+
+  &__link {
+    padding: 25px 0;
+    position: relative;
+    cursor: pointer;
+    @include transitionBtn();
+    &:hover {
+      background: $page-hover;
+      @include transitionBtn();
+      &:after {
+        background: $page-hover;
+        top: 0;
+        height: 100%;
+        z-index: 2;
+        @include transition();
+      }
+      &:before {
+        background: $page-hover;
+        top: 0;
+        height: 100%;
+        z-index: 1;
+        @include transition();
+      }
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      top: 24px;
+      content: "";
+      width: 1px;
+      height: 24px;
+      background-color: $navigate-border;
+      @include transitionBtn();
+    }
+    &:before {
+      display: block;
+      position: absolute;
+      top: 24px;
+      right: -1px;
+      content: "";
+      width: 1px;
+      height: 24px;
+      background-color: $navigate-border;
+      @include transitionBtn();
+    }
+    &_first {
+      /* Out of container */
+      margin-left: -22px;
+      &:after {
+        display: none;
+      }
+    }
+    &_last {
+      /* Out of container */
+      margin-right: -17px;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    font-size: 18px;
+    color: $bg;
+    padding: 2px 24px 2px 23.5px;
+    position: relative;
+
+    &_last {
+      /* Out of container */
+      padding-right: 17px;
+      padding-left: 17.5px;
+    }
+    &_first {
+      /* Out of container */
+      padding-left: 22px;
+    }
+  }
+
+  &__menu-open {
+    background: $page-hover;
+  }
+
+  &__all-categories {
+    padding: 23px 0 23px 0;
+    min-width: 320px;
+    font-size: 24px;
+    text-align: center;
+    color: $bg;
+  }
+
+  &__make-up {
+    border-right: 1px solid $navigate-border;
+  }
+
+  &__wrapper {
+    padding: 19px 34px 27px 22px;
+  }
+
+  &__headding {
+    h3 {
+      white-space: nowrap;
+      @include RobotoSlabBold();
+      font-size: 18px;
+      margin-bottom: 22px;
+      color: $bg;
+    }
+  }
+
+  &__links {
+    white-space: nowrap;
+    box-sizing: border-box;
+    li {
+      padding-bottom: 13px;
+      &:last-child {
+        padding-bottom: 0px;
+      }
+    }
+    a {
+      color: $bg;
+      font-size: 16px;
+      text-decoration: none;
+      @include RobotoRegular();
+      &:hover {
+        @include RobotoBold();
+      }
+    }
+  }
+
+  &__brands {
+    margin-left: 40px;
+  }
+
+  &__select + * .mat-menu-panel {
+    min-width: 646px;
+    background: $page-hover;
+    border-radius: 0;
+  }
+
+  &__select + * .mat-menu-content:not(:empty) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .navigate {
+    &__item {
+      padding: 2px 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .navigate {
+    &__wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__headding {
+      margin-bottom: 30px;
+    }
+    &__select + * .mat-menu-panel {
+      min-width: 100vw;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navigate {
+    &__brands {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .navigate {
+    &__brands {
+      margin-left: 20px;
+    }
+    &__make-up {
+      border-right: none;
+    }
+    &__brands {
+      margin-top: 36px;
+      margin-left: 0px;
+    }
+  }
+}

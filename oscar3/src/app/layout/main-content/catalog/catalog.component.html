@@ -1,0 +1,71 @@
+<div class="catalog">
+  <div class="container">
+  <div class="catalog__content">
+    <div class="catalog__products">
+      <div class="catalog__title" fxLayoutAlign="center">
+        <h2>Best Sellers</h2>
+      </div>
+      <div
+        class="catalog__show"
+        fxLayout="row"
+        fxLayoutAlign="center"
+        fxLayoutGap="49px"
+        fxLayoutGap.lt-sm="18px"
+      >
+        <div class="catalog__link"><a href="">Top 10</a></div>
+        <div class="catalog__link catalog__link_active"><a href=""><span fxHide.lt-sm>Top</span> Ranking</a></div>
+        <div class="catalog__link"><a href="">Recommend <span fxHide.lt-sm>Products</span></a></div>
+        <div class="catalog__link"><a href=""><span fxHide.lt-sm>Most</span> Popular</a></div>
+      </div>
+
+
+      <div 
+        class="catalog__catalog" 
+        fxLayout = "row wrap" 
+        fxLayoutAlign = "space-between"
+        fxLayoutAlign.lt-lg = "space-around"
+        >
+        <div *ngFor="let product of products" fxFlex = "295px">
+          <app-product-item [product] = "product"></app-product-item>
+        </div>
+      </div>
+
+
+      <!-- Block with ad -->
+      <div 
+        class="catalog__discount" 
+        fxLayout = "row" 
+        fxLayoutAlign = "start" 
+        fxLayoutAlign.lt-sm = "center"
+      >
+        <div class="catalog__gifts" fxFlexAlign = "center" >
+          <h2>Holiday Gifts</h2>
+          <p>Skin Care & Make Up <span>90%</span> Off</p>
+          <div class="catalog__btn">
+            <button>Shop Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog__on-sale">
+        <div class="catalog__title catalog__on-sale-headding" fxLayoutAlign="center">
+          <h2>On sale</h2>
+        </div>
+      </div>
+
+      <div 
+        class="catalog__catalog" 
+        fxLayout = "row wrap" 
+        fxLayoutAlign = "space-between"
+        fxLayoutAlign.lt-lg = "space-around"
+        >
+        <div *ngFor="let product of onSaleProducts" fxFlex = "232px">
+          <app-product-item [product] = "product"></app-product-item>
+        </div>
+      </div>
+
+      <app-recommendation></app-recommendation>
+    </div>
+  </div>
+</div>
+</div>
