@@ -1,0 +1,109 @@
+<header class="container">
+    <h1>
+        Library
+    </h1>
+</header>
+<section class="home">
+    <div class="container">
+        <div class="home__library">
+            <div class="home__book" *ngFor="let book of allBooks">
+                <div class="home__left">
+                    <img src="{{ book.imageLink }}" alt="">
+                </div>
+                <div class="home__right">
+                    <div class="home__descript">
+                        <div class="home__title">
+                            {{ book.title }}
+                        </div>
+                        <div class="home__author">
+                            {{ book.author }}
+                        </div>
+                        <div class="home__pages">
+                            {{ book.pages }}p.
+                        </div>
+                    </div>
+                    <div class="home__button">
+                        <button (click)="showModal(book); showModalToggle = !showModalToggle; hideModalToggle = !hideModalToggle">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="paginator">
+    <div class="container">
+        <div class="paginator__show">
+            <button (click)="onClickLeftButton()" class="paginator__left-button" [disabled]='disabledLeft' #leftButton>
+                &#8592;
+            </button>
+            <div class="paginator__middle-text">
+                {{ counter }}
+            </div>
+            <button (click)="onClickRightButton()" class="paginator__right-button" [disabled]='disabledRight' #rightButton>
+                &#8594;
+            </button>
+        </div>
+    </div>
+</section>
+<section class="modal" [ngClass]="{'modal__show' : showModalToggle, 'modal__hide' : hideModalToggle}" #modal>
+    <div class="modal__window">
+        <div class="modal__left">
+            <img src="{{ aboutBook.imageLink }}" alt="Poster">
+        </div>
+        <div class="modal__descript">
+            <div class="modal__title modal__other">
+                <div class="modal__up">
+                    Title:
+                </div>
+                <div class="modal__down">
+                    {{ aboutBook.title }}
+                </div>
+            </div>
+            <div class="modal__author modal__other">
+                <div class="modal__up">
+                    Author:
+                </div>
+                <div class="modal__down">
+                    {{ aboutBook.author }}
+                </div>
+            </div>
+            <div class="modal__language modal__other">
+                <div class="modal__up">
+                    Language:
+                </div>
+                <div class="modal__down">
+                    {{ aboutBook.language }}
+                </div>
+            </div>
+            <div class="modal__country modal__other">
+                <div class="modal__up">
+                    Country:
+                </div>
+                <div class="modal__down">
+                    {{ aboutBook.country }}
+                </div>
+            </div>
+            <div class="modal__pages modal__other">
+                <div class="modal__up">
+                    Pages:
+                </div>
+                <div class="modal__down">
+                    {{ aboutBook.pages }}
+                </div>
+            </div>
+            <div class="modal__year modal__other">
+                <div class="modal__up">
+                    Year:
+                </div>
+                <div class="modal__down">
+                    {{ aboutBook.year }}
+                </div>
+            </div>
+        </div>
+        <div class="modal__close" (click)="showModalToggle = !showModalToggle; hideModalToggle = !hideModalToggle">
+            <img src="http://s1.iconbird.com/ico/0612/GooglePlusInterfaceIcons/w128h1281338911586cross.png" alt="">
+        </div>
+    </div>
+</section>
